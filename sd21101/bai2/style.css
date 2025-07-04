@@ -1,0 +1,28 @@
+/* p {
+  text-decoration: underline;
+  color: blue;
+} */
+
+span {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+#id1 {
+  font-size: 20px;
+}
+
+p.class1 {
+  color: red;
+}
+
+p {
+  background-color: lightgray;
+}
+
+#li1,
+.class-li-1,
+h5 {
+  font-family: Arial, sans-serif;
+  color: green;
+}
