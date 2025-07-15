@@ -1,0 +1,12 @@
+h2 {
+  background-color: black;
+  color: red !important;
+}
+
+.div1 h2 {
+  background-color: blue;
+}
+
+.div1#div1 h2 {
+  background-color: yellow;
+}

@@ -1,0 +1,25 @@
+.div1 {
+  width: 100px;
+  height: 100px;
+  background-color: yellow;
+  /* padding-left: 20px;
+  padding-top: 30px;
+  padding-right: 20px;
+  padding-bottom: 30px; */
+  /* padding: 5px 10px 15px 20px; */
+  /* padding: 10px 20px 5px; */
+  padding: 20px;
+
+  /* border-top: 2px double blue;
+  border-right: 2px solid green;
+  border-bottom: 2px dashed red;
+  border-left: 2px groove black; */
+
+  border: 2px solid black;
+}
+
+.div2 {
+  width: 100px;
+  height: 100px;
+  background-color: pink;
+}
