@@ -1,0 +1,28 @@
+.div1,
+.div2 {
+  width: 100px;
+  height: 100px;
+  padding: 15px;
+  border: 2px solid red;
+  border-radius: 5%;
+  margin-left: 50px;
+}
+
+.div1 {
+  background-color: pink;
+  margin-bottom: 30px;
+  box-shadow: -5px -6px 7px blue;
+}
+
+.div2 {
+  background-color: orange;
+}
+
+.div3 {
+  /* width: 600px; */
+  height: 2000px;
+  background-image: url("https://png.pngtree.com/png-vector/20210226/ourmid/pngtree-cartoon-dog-footprints-png-image_2961990.jpg");
+  background-repeat: no-repeat;
+  background-size: 75% 50%;
+  background-position: center center;
+}

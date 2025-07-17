@@ -48,3 +48,70 @@ console.log(arr2); // "le"
 arr2[10] = "tai";
 console.log(arr2); // "tai"
 console.log(arr2[6]); // undefined
+
+// them phan tu vao mang
+let arr3 = ["hieu", "chi", "linh", "hoa"];
+arr3.unshift("nam"); // them vao dau mang
+console.log(arr3); // "nam"
+arr3.push("lan"); // them vao cuoi mang
+console.log(arr3); // "lan"
+arr3.splice(1, 0, "ha", "trung", "ngoc"); // them vao vi tri bat ki
+console.log(arr3); // "ha"
+
+// xoa phan tu mang
+arr3.shift(); // xoa phan tu dau mang
+console.log(arr3);
+arr3.pop(); // xoa phan tu cuoi mang
+console.log(arr3);
+arr3.splice(1, 2); // xoa phan tu bat ki
+console.log(arr3);
+
+// xoa chi ra khoi mang, sau do them lien va loan
+arr3.splice(2, 1, "lien", "lan");
+console.log(arr3);
+
+let arr4 = arr2.concat(arr3);
+console.log(arr4);
+
+console.log(arr4.indexOf("hieu"));
+console.log(arr4.lastIndexOf("hieu")); // tra ve vi tri cuoi cung cua indexOf("hieu"));
+
+// ep kieu
+let num5 = 8; // ep kieu ngam dinh
+let num6 = Number(10); // ep kieu tuong minh
+console.log(typeof num5); // number
+console.log(typeof num6); // number
+let str1 = "100"; // string
+let num7 = Number(str1); // number
+console.log(typeof str1); // string
+console.log(typeof num7); // number
+console.log(str1, num7); // 100
+
+// cac gia tri truthy va falsy:
+// cau hoi: liet ke cac gia tri falsy
+let num8 = 1;
+let x = Boolean(num8);
+console.log(x);
+let y = String(num8);
+console.log(typeof y);
+
+//
+if (false || false || false) {
+  console.log("true");
+} else {
+  console.log("false");
+}
+console.log(true && true && true);
+console.log(!true);
+console.log(!false);
+
+let num10 = 4;
+let num11 = -6;
+console.log(num10);
+++num10;
+console.log(num10); // 5
+--num11;
+console.log(num11); // -7
+
+console.log(num10++); // 5
+console.log(num10); //6
