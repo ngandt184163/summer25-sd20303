@@ -1,0 +1,15 @@
+.div1 {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  background-color: aqua;
+}
+
+.div2 {
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  background-color: blu;
+}
+
+/* ph63720 */
