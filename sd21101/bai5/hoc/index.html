@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h2>thiet ke form</h2>
+    <h3>Form dang ky</h3>
+    <form action="" method="get" enctype="multipart/form-data">
+      ho ten: <input name="hoten" type="text" /><br />
+      email: <input name="email" type="email" /><br />
+      mat khau: <input name="matkhau" type="password" /><br />
+      anh dai dien: <input name="anhdaidien" type="file" /><br />
+      so thich cua ban: <br />
+      <input type="checkbox" name="sothich" value="the thao" /> the thao
+      <br />
+      <input checked type="checkbox" name="sothich" value="du lich" /> du lich
+      <br />
+      <input checked type="checkbox" name="sothich" value="xem phim" /> xem phim
+      <br />
+      <input type="checkbox" name="sothich" value="boi loi" /> boi loi
+      <br />
+      gioi tinh: <br />
+      <input type="radio" name="gioitinh" value="nam" /> nam
+      <br />
+      <input checked type="radio" name="gioitinh" value="nu" /> nu
+      <br />
+      <input type="radio" name="gioitinh" value="khongbiet" /> khong biet
+      <br />
+      <input type="hidden" name="trangthai" value="1" /><br />
+      gioi thieu ve ban than: <br />
+      <textarea name="gioithieu" cols="100s" rows="10"></textarea><br />
+      que quan:
+      <select name="quequan" multiple size="2">
+        <option value="ha noi">ha noi</option>
+        <option value="hcm">hcm</option>
+        <option value="hue">hue</option>
+        <option selected value="da nang">da nang</option></select
+      ><br />
+      <input type="submit" value="dang nhap" />
+      <input type="reset" value="lam sach form" />
+    </form>
+    <!-- +action: chi dinh noi du lieu se duoc
+     xu ly sau khi form duoc gui
+      +method: chi dinh phuong thuc gui du lieu
+        - get: dung khi gui du lieu qua url hoac yc lay du lieu
+        - post: dung khi gui du lieu qua form hoac thu thap du lieu
+      +enctype: kieu dong goi du lieu -->
+
+    <div class="cha">
+      <p class="center">can giua</p>
+    </div>
+    <style>
+      .cha {
+        width: 500px;
+        height: 500px;
+        background-color: green;
+      }
+      .center {
+        width: 300px;
+        height: 300px;
+        background-color: red;
+        align-content: center; /* căn dọc */
+        text-align: center; /* căn ngang */
+      }
+    </style>
+  </body>
+</html>
