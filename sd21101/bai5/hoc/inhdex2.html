@@ -8,43 +8,56 @@
   </head>
   <body>
     <h2>form doi mat khau</h2>
-    <form action="" method="get" enctype="multipart/form-data">
-      <fieldset>
-        <legend>email</legend>
-        <label for=""
-          ><input
-            type="email"
-            name="email"
-            placeholder=""
-            value="ngan@gmail.com"
-            tabindex="1" /><br
-        /></label>
-      </fieldset>
-      <div>
-        <label for="password">mat khau moi</label>
-        <input
-          type="password"
-          name="matkhau"
-          id="password"
-          placeholder="@123@123"
-        /><br />
-      </div>
-      test 1: <input type="text" name="" id="" tabindex="2" /> <br />
-      test 2:
-      <input type="text" name="" id="" tabindex="4" /><br />
-      <!-- <input type="submit" value="dang nhap" /> -->
+    <div class="form">
+      <form action="" method="get" enctype="multipart/form-data">
+        <fieldset class="form-group">
+          <legend>email</legend>
+          <label for=""
+            ><input
+              type="email"
+              name="email"
+              placeholder=""
+              value="ngan@gmail.com"
+              tabindex="1" /><br
+          /></label>
+        </fieldset>
+        <div class="form-group">
+          <label for="password">mat khau moi</label>
+          <input
+            type="password"
+            name="matkhau"
+            id="password"
+            placeholder="@123@123"
+          /><br />
+        </div>
+        <div class="form-group">
+          test 1: <input type="text" name="" id="" tabindex="2" /> <br />
+        </div>
+        <div class="form-group">
+          test 2:
+          <input type="text" name="" id="" tabindex="4" /><br />
+        </div>
 
-      <!-- cac loai the input mo rong -->
-      <input type="date" /><br />
-      <input type="time" /><br />
-      <input type="week" /><br />
-      <input type="color" /><br />
-      <input type="number" max="10" min="1" /><br />
-      <input type="range" /><br />
-      <input type="email" /><br />
-      <button type="submit">dang nhap</button>
-      <button tabindex="3" type="reset">reset</button>
-      <p style="background-color: rgb(129, 59, 59)">hahahaha</p>
-    </form>
+        <!-- <input type="submit" value="dang nhap" /> -->
+
+        <!-- cac loai the input mo rong -->
+        <div class="form-group"><input type="date" /><br /></div>
+        <div class="form-group"><input type="time" /><br /></div>
+        <div class="form-group"><input type="week" /><br /></div>
+        <div class="form-group"><input type="color" /><br /></div>
+        <div class="form-group">
+          <input type="number" max="10" min="1" /><br />
+        </div>
+        <div class="form-group"><input type="range" /><br /></div>
+        <div class="form-group"><input type="email" /><br /></div>
+
+        <div class="form-group">
+          <button type="submit">dang nhap</button>
+          <button tabindex="3" type="reset">reset</button>
+        </div>
+
+        <p style="background-color: rgb(129, 59, 59)">hahahaha</p>
+      </form>
+    </div>
   </body>
 </html>

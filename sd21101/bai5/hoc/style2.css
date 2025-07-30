@@ -1,0 +1,27 @@
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  background-color: #eabd8b;
+  padding: 20px 40px;
+  border: 1px solid red;
+  border-radius: 3%;
+  box-shadow: 10px 10px 10px #342d24ff;
+}
+
+input {
+  padding: 7px;
+  border-radius: 2%;
+  outline: none;
+}
+
+input:focus {
+  border: 2px solid red;
+}
+
+.form-group {
+  margin: 15px 0;
+}

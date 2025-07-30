@@ -1,0 +1,14 @@
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  background-color: #ccc;
+}
+
+input:focus {
+  outline: none;
+  border: 2px solid red;
+}

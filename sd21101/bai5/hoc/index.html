@@ -9,40 +9,44 @@
   <body>
     <h2>thiet ke form</h2>
     <h3>Form dang ky</h3>
-    <form action="" method="get" enctype="multipart/form-data">
-      ho ten: <input name="hoten" type="text" /><br />
-      email: <input name="email" type="email" /><br />
-      mat khau: <input name="matkhau" type="password" /><br />
-      anh dai dien: <input name="anhdaidien" type="file" /><br />
-      so thich cua ban: <br />
-      <input type="checkbox" name="sothich" value="the thao" /> the thao
-      <br />
-      <input checked type="checkbox" name="sothich" value="du lich" /> du lich
-      <br />
-      <input checked type="checkbox" name="sothich" value="xem phim" /> xem phim
-      <br />
-      <input type="checkbox" name="sothich" value="boi loi" /> boi loi
-      <br />
-      gioi tinh: <br />
-      <input type="radio" name="gioitinh" value="nam" /> nam
-      <br />
-      <input checked type="radio" name="gioitinh" value="nu" /> nu
-      <br />
-      <input type="radio" name="gioitinh" value="khongbiet" /> khong biet
-      <br />
-      <input type="hidden" name="trangthai" value="1" /><br />
-      gioi thieu ve ban than: <br />
-      <textarea name="gioithieu" cols="100s" rows="10"></textarea><br />
-      que quan:
-      <select name="quequan" multiple size="2">
-        <option value="ha noi">ha noi</option>
-        <option value="hcm">hcm</option>
-        <option value="hue">hue</option>
-        <option selected value="da nang">da nang</option></select
-      ><br />
-      <input type="submit" value="dang nhap" />
-      <input type="reset" value="lam sach form" />
-    </form>
+    <div class="form">
+      <form action="" method="get" enctype="multipart/form-data">
+        ho ten: <input name="hoten" type="text" /><br />
+        email: <input name="email" type="email" /><br />
+        mat khau: <input name="matkhau" type="password" /><br />
+        anh dai dien: <input name="anhdaidien" type="file" /><br />
+        so thich cua ban: <br />
+        <input type="checkbox" name="sothich" value="the thao" /> the thao
+        <br />
+        <input checked type="checkbox" name="sothich" value="du lich" /> du lich
+        <br />
+        <input checked type="checkbox" name="sothich" value="xem phim" /> xem
+        phim
+        <br />
+        <input type="checkbox" name="sothich" value="boi loi" /> boi loi
+        <br />
+        gioi tinh: <br />
+        <input type="radio" name="gioitinh" value="nam" /> nam
+        <br />
+        <input checked type="radio" name="gioitinh" value="nu" /> nu
+        <br />
+        <input type="radio" name="gioitinh" value="khongbiet" /> khong biet
+        <br />
+        <input type="hidden" name="trangthai" value="1" /><br />
+        gioi thieu ve ban than: <br />
+        <textarea name="gioithieu" cols="100s" rows="10"></textarea><br />
+        que quan:
+        <select name="quequan" multiple size="2">
+          <option value="ha noi">ha noi</option>
+          <option value="hcm">hcm</option>
+          <option value="hue">hue</option>
+          <option selected value="da nang">da nang</option></select
+        ><br />
+        <input type="submit" value="dang nhap" />
+        <input type="reset" value="lam sach form" />
+      </form>
+    </div>
+
     <!-- +action: chi dinh noi du lieu se duoc
      xu ly sau khi form duoc gui
       +method: chi dinh phuong thuc gui du lieu
