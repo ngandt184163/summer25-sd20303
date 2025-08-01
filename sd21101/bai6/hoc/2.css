@@ -1,0 +1,23 @@
+table {
+  border-collapse: collapse;
+}
+.tb1 tbody tr:nth-child(2n + 1) {
+  background-color: pink;
+}
+
+.tb1 tr:nth-child(2n) {
+  background-color: red;
+}
+
+.tb1 tr:first-child {
+  background-color: #ccc;
+}
+
+.tb1 tr:last-child {
+  background-color: #ccc;
+}
+
+.tb1 td,
+th {
+  padding: 10px;
+}
