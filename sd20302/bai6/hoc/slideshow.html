@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .slide-show {
+        width: 70%;
+        margin: 0 auto;
+        height: 400px;
+        overflow: hidden;
+        position: relative;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: opacity 1s ease-in-out;
+      }
+      .controls {
+        text-align: center;
+        padding: 20px;
+        margin: 0 auto;
+        width: 70%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slide-show">
+      <img id="img" src="" alt="anh loi" />
+    </div>
+    <div class="controls">
+      <button id="start">start</button>
+      <button id="first">first</button>
+      <button id="pre">pre</button>
+      <button id="next">next</button>
+      <button id="last">last</button>
+      <button id="stop">stop</button>
+    </div>
+
+    <script src="slideshow.js"></script>
+  </body>
+</html>
