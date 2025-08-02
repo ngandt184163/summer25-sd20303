@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul id="menu">
+      <li>1</li>
+      <li>2</li>
+    </ul>
+
+    <button id="btn">click</button>
+
+    <script>
+      let i = 3;
+      let b = document.getElementById("btn");
+      b.onclick = function () {
+        let item = document.createElement("li");
+        item.innerHTML = i;
+        i++;
+        let menu = document.getElementById("menu");
+        menu.appendChild(item);
+      };
+    </script>
+  </body>
+</html>
