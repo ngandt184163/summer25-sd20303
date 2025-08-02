@@ -39,7 +39,7 @@ next.onclick = function () {
   }
   id_interval = chaytudong(); // bat dau chay tu dong lai
 };
-
+// nut prev
 let pre = document.getElementById("pre");
 pre.onclick = function () {
   clearInterval(id_interval); // dung chay tu dong
@@ -52,3 +52,33 @@ pre.onclick = function () {
   }
   id_interval = chaytudong(); // bat dau chay tu dong lai
 };
+
+//btn start
+let start = document.getElementById("start");
+start.onclick = function () {
+  clearInterval(id_interval); // dung chay tu dong
+  id_interval = chaytudong(); // bat dau chay tu dong lai
+};
+
+//btn stop
+let stop = document.getElementById("stop");
+stop.onclick = function () {
+  clearInterval(id_interval); // dung chay tu dong
+  id_interval = null; // gan id_interval = null de khong chay tu dong nua
+};
+//PH58408
+
+//btn fisrt
+let first = document.getElementById("first");
+first.onclick = function () {
+  index = 0;
+  img.src = arr[index];
+};
+
+//btn last
+let last = document.getElementById("last");
+last.onclick = function () {
+  index = len - 1;
+  img.src = arr[index];
+};
+//ph59756
