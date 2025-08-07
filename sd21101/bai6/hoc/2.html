@@ -220,9 +220,18 @@
     />
 
     <!-- nhung audio va video -->
-    <audio src="audio.m4a" loop controls type="audio/mpeg">
+    <audio id="audio" src="audio.m4a" loop controls type="audio/mpeg">
       trinh duyet khong ho tro audio
     </audio>
-    <video src="video.mp4" type="video/mp4" controls></video>
+    <video id="video" src="video.mp4" type="video/mp4" controls></video>
+    <div class="controls">
+      <button id="play">Play</button>
+      <button id="pause">Pause</button>
+      <button id="stop">Stop</button>
+      <button id="mute">Mute</button>
+      <button id="unmute">Unmute</button>
+      <input type="range" id="volume" min="0" max="1" step="0.1" value="1" />
+    </div>
+    <script src="2.js"></script>
   </body>
 </html>
