@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .err {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>form dat hang</h2>
+    <form action="" id="form" method="post" enctype="multipart/form-data">
+      ten khach hang: <input type="text" name="name" /><br />
+      <p class="err" id="errName"></p>
+      so dien thoai: <input type="number" name="phone" /><br />
+      <p class="err" id="errPhone"></p>
+      <table border="1">
+        <tr>
+          <td>stt</td>
+          <td>ten san pham</td>
+          <td>gia</td>
+          <td>so luong</td>
+          <td>thanh tien</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>bang ngot pho mai</td>
+          <td>1000</td>
+          <td><input type="number" name="soluong1" value="1" min="0" /></td>
+          <td>
+            <input type="number" name="thanhtien1" value="1000" disabled />
+          </td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>sukem phomai</td>
+          <td>500</td>
+          <td><input type="number" name="soluong2" value="1" min="0" /></td>
+          <td>
+            <input type="number" name="thanhtien2" value="500" disabled />
+          </td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>tra sua</td>
+          <td>2000</td>
+          <td><input type="number" name="soluong3" value="1" min="0" /></td>
+          <td>
+            <input type="number" name="thanhtien3" value="2000" disabled />
+          </td>
+        </tr>
+        <tr>
+          <td colspan="4">tong tien</td>
+          <td><input type="number" name="tongtien" value="3500" disabled /></td>
+        </tr>
+      </table>
+      <input type="submit" value="dat mua" />
+    </form>
+    <script src="2.js"></script>
+  </body>
+</html>

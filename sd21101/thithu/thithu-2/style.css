@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+}
+
+.header {
+  background-color: #eb612aff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+}
+.header form input[type="text"] {
+  padding: 5px 10px;
+  border: none;
+}
+
+.header form input[type="submit"] {
+  padding: 5px 10px;
+  border: none;
+  background-color: #100669ff;
+  color: #fff;
+}
+
+.menu ul {
+  background-color: #3d2aebff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.menu ul li {
+  list-style-type: none;
+  padding: 10px;
+}
+
+.menu ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+.main {
+  padding: 5px 20px;
+}
+.main .content {
+  display: flex;
+  justify-content: center;
+}
+
+.main .content img {
+  width: 100%;
+}
+.main .content .left {
+  width: 70%;
+}
+
+.main .content .left .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main .content .left .content .box1,
+.main .content .left .content .box2 {
+  width: 50%;
+}
+
+.main .content .right {
+  width: 30%;
+}
+.main .content .left .title {
+  margin: 15px 0;
+}

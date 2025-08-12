@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.header .menu ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 10px;
+}
+.header .menu ul li {
+  padding: 5px 10px;
+  list-style-type: none;
+}
+.header .menu ul li a {
+  text-decoration: none;
+}
+
+.header .menu ul li a:hover {
+  color: orange;
+}
+.banner img {
+  width: 100%;
+}
+.main {
+  margin-top: 30px;
+}
+.main .content {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+}
+
+.main .content .left,
+.main .content .right {
+  width: 50%;
+  margin-bottom: 30px;
+}
+
+.main .content .left {
+  padding: 0 20px;
+}
+
+.main .content .left .title a {
+  text-decoration: none;
+}
+.main .content .left .title a:hover {
+  color: orange;
+}
+.main .content .left .text {
+  margin: 20px 0;
+}
+
+.main .content .left .read-more {
+  padding: 15px 20px;
+  background-color: orange;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+
+.main .content .right img {
+  width: 100%;
+}
+
+.main .content .right img:hover {
+  box-shadow: 5px 5px 5px red;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 20px;
+  background-color: blueviolet;
+  color: white;
+}
+
+.footer form input[type="email"] {
+  border: 1px solid orange;
+  border-radius: 5px;
+  padding: 10px 20px;
+  background-color: blueviolet;
+  color: #fff;
+}
+
+.footer form input[type="submit"] {
+  border-radius: 5px;
+  padding: 10px 20px;
+  background-color: orange;
+  color: #fff;
+  border: none;
+}
