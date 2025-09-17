@@ -1,8 +1,8 @@
 let form = document.getElementById("form");
 console.log(form);
 
-let soluong1 = form["soluong1"];
-let soluong2 = form["soluong2"];
+let soluong1 = form["soluong1"]; // lay dược thẻ input có name= "soluong1"
+let soluong2 = form["soluong2"]; // lay dc gia tri ng dung nhap vào thẻ input có name = "soluong2"
 let soluong3 = form["soluong3"];
 
 let thanhtien1 = form["thanhtien1"];
