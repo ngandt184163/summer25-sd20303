@@ -1,0 +1,47 @@
+h2 {
+  text-decoration: underline;
+}
+
+#tieude3 {
+  color: violet;
+}
+
+.tieude {
+  background-color: yellow;
+}
+
+h3 {
+  border: 1px solid black;
+}
+
+#tieudedacbiet {
+  text-shadow: 2px 2px 5px red;
+  /* text-decoration: underline; */
+}
+
+/* p {
+  background-color: pink;
+} */
+
+.sp {
+  background-color: pink;
+  /* text-decoration: underline; */
+}
+
+#tieudedacbiet,
+.sp {
+  text-decoration: underline;
+}
+
+#test {
+  font-size: 20px; /*thay doi kich thuoc chu*/
+  font-family: Arial, sans-serif; /* thay doi kieu chu, font chu*/
+  font-weight: bold; /*thay doi do dam nhat cua chu*/
+  font-style: italic; /*thay doi kieu dang chu ( in nghieng)*/
+  text-align: center; /*chinh lai vi tri bat dau cua chu( giua)*/
+  text-decoration: underline; /*them gach chan cho chu*/
+  text-shadow: 2px 2px 5px gray; /*them hieu ung bong do cho chu*/
+  line-height: 1.5; /*thay doi chieu cao dong chu*/
+  letter-spacing: 2px; /*khoang cach giua cac ky tu*/
+  word-spacing: 4px; /*khoang cach giua cac tu*/
+}

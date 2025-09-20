@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>hom nay la thu 7</title>
+    <style>
+      /* code css dat o day */
+      h2 {
+        /* doi mau nen */
+        background-color: turquoise;
+        /* doi font chu */
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        /* can chinh vi tri cua chu */
+        text-align: center;
+        /* tao bong do cho chu */
+        text-shadow: -5px -5px 5px blue;
+        /* tao vien cho the */
+        border: 1px solid greenyellow;
+      }
+
+      h1 {
+        color: blue;
+      }
+    </style>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="sanpham.css" />
+    <link rel="stylesheet" href="lienhe.css" />
+  </head>
+  <body>
+    <!-- tieu de bai hoc -->
+    <h1>Bai hoc so 2</h1>
+
+    <!-- vi tri dat ma css: co 3 vi tri
+      1. inline: dat trong the html ma mong
+      muon css tac dong, sd thuoc tinh style
+      2. internal: dat trong the head,
+      su dung the style
+      3. external: dat trong file css,
+      va lien ket voi file html bang the link
+      -->
+    <h2 style="color: red; font-size: 30px">vi tri dat ma css</h2>
+    <h3 id="tieude3" class="tieude">tieu de 3</h3>
+    <h6 id="tieudedacbiet">tieu de dac biet</h6>
+
+    danh sach san pham
+    <p class="sp">sp1</p>
+    <p class="sp">sp2</p>
+    <p class="sp">sp3</p>
+    <p class="sp">sp4</p>
+    <p class="sp">sp4</p>
+    <div class="sp">sp5</div>
+
+    <!-- css selector: bo chon css
+     1. id: #: chi chon 1 the duy nhat co gia tri
+     thuoc tinh id tuong ung
+     2. class: .: chon danh sach cac the
+     co cung gia tri thuoc tinh class tuong ung 
+     3. tag name: ten the: chon danh sach cac the 
+     co cung ten the tuong ung -->
+
+    <p id="test">font chu, text</p>
+  </body>
+</html>
