@@ -1,0 +1,11 @@
+.div1 {
+  width: 200px; /*thiet lap chieu dai*/
+  height: 200px; /*thiet lap chieu cao(rong)*/
+  background-color: red; /*thiet lap mau nen*/
+  /*thiet lap vung dem*/
+  /* padding: 30px 20px 10px 5px;  */
+  padding-left: 30px;
+  border: 2px solid #ccc;
+  border-right: 5px solid #ccc;
+  /* ve thuc hanh them o slide3 trang 15 */
+}

@@ -1,0 +1,35 @@
+a:link {
+  background-color: yellow;
+}
+
+a:visited {
+  background-color: red;
+}
+
+a:active {
+  background-color: orange;
+}
+
+a:hover {
+  background-color: green;
+}
+
+#tieude2 {
+  background-color: red;
+}
+
+#tieude3 {
+  background-color: yellow;
+}
+/* chon the vua co id = tieude3 vua co class=class3 */
+#tieude3.class3 {
+  background-color: yellowgreen;
+}
+
+h3 {
+  background-color: blue;
+}
+
+.class3 {
+  background-color: red;
+}
