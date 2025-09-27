@@ -1,0 +1,27 @@
+.menu,
+.menu-doc {
+  display: flex;
+  /* justify-content: space-around; */
+  background-color: orange;
+  padding: 10px 0;
+}
+
+.menu li {
+  list-style-type: none;
+  padding: 0 10px;
+}
+
+.menu-doc li {
+  list-style-type: none;
+  padding: 10px 10px;
+}
+
+.menu li a,
+.menu-doc li a {
+  text-decoration: none;
+}
+
+.menu-doc {
+  width: 300px;
+  display: block;
+}
