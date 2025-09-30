@@ -1,7 +1,7 @@
 .menu,
 .menu-doc {
   display: flex;
-  /* justify-content: space-around; */
+  justify-content: center;
   background-color: orange;
   padding: 10px 0;
 }
@@ -24,4 +24,30 @@
 .menu-doc {
   width: 300px;
   display: block;
+}
+
+.sub-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100px;
+  background-color: violet;
+}
+.sub-menu li {
+  padding: 10px 10px;
+}
+
+/* hien thi sub-menu khi hover vao the li */
+.menu li:hover .sub-menu {
+  display: block;
+}
+
+.menu li {
+  position: relative;
+}
+
+/* hover vao tat ca cac the a thi doi mau text */
+a:hover {
+  color: red;
 }
