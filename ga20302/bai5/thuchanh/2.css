@@ -1,0 +1,13 @@
+.form-dn {
+  width: 400px;
+  margin: auto;
+  background-color: violet;
+  padding: 15px;
+  border-radius: 5%;
+  box-shadow: 5px 5px 5px #9b669b;
+
+  /* thuoc tinh can giua cac item */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

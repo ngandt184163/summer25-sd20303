@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="2.css" />
+  </head>
+  <body>
+    <div class="form-dn">
+      <form action="" method="" enctype="">
+        <h2>form dang nhap</h2>
+        <!-- noi viet tieu de, mo ta ve truong du lieu -->
+        <div>
+          <label for="email">Email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="ngandt35@fpt.edu.vn"
+            tabindex="1"
+            required
+          /><br />
+        </div>
+        <div>
+          <label for="username">username</label>
+          <input
+            type="text"
+            name="username"
+            id="username"
+            value="ngandt35"
+          /><br />
+        </div>
+        <div>
+          <label for="password">Mat khau</label>
+          <input
+            type="password"
+            name="mk"
+            id="password"
+            tabindex="2"
+            required
+          /><br />
+        </div>
+        <!-- ve nha thuc hanh them ve fieldset -->
+        <!-- nhung the input mo rong -->
+        <input type="date" name="date" /><br />
+        <input type="color" name="color" /><br />
+        <input type="time" name="time" /><br />
+        <input type="week" name="week" /><br />
+        <input type="number" name="number" min="0" max="10" /><br />
+        <input type="range" name="range" min="0" max="100" /><br />
+
+        <input type="submit" value="dang nhap" />
+        <!-- <button type="submit">btn gui</button>
+      <button type="reset">btn nhap lai</button> -->
+
+        <!-- http://127.0.0.1:5500/ga20302/bai5/thuchanh/2.html?email=abc%40gmail.com&username=ngandt35&mk=00000000&date=2025-10-02&color=%23d32727&time=08%3A23&week=2025-W40&number=4&range=37 -->
+      </form>
+    </div>
+  </body>
+</html>
