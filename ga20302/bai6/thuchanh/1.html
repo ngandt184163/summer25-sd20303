@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="1.css" />
+  </head>
+  <body>
+    <h2>bang va da phuong tien</h2>
+    <!-- bang trong html dung de trinh bay du lieu theo hang
+     cot, giong bang trong word excel, moi o trong bang
+     chua noi dung nhu van ban, hinh anh, hoac 1 bang khac -->
+    <table border="1">
+      <!-- tieu de cua bang -->
+      <caption>
+        Thong Ke diem sinh vien
+      </caption>
+      <!-- hang tieu de -->
+      <thead>
+        <tr>
+          <!-- th: dung de in dam tieu de -->
+          <th>STT</th>
+          <th>MSSV</th>
+          <th>HO TEN</th>
+          <th>DIEM</th>
+        </tr>
+      </thead>
+      <!-- phan noi dung bang, chua cac hang
+       du lieu -->
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>ph123456</td>
+          <td>nguyen van a</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>ph123457</td>
+          <td>nguyen van b</td>
+          <td>9</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>ph123458</td>
+          <th>nguyen van c</th>
+          <td rowspan="2">8</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>ph123459</td>
+          <td>nguyen van d</td>
+        </tr>
+        <tr>
+          <td colspan="3">Tong diem tat ca sv</td>
+          <td>35</td>
+        </tr>
+      </tbody>
+
+      <!-- phan chan bang -->
+      <tfoot>
+        <tr>
+          <th colspan="4">ban quyen thuoc ve @1234</th>
+        </tr>
+      </tfoot>
+    </table>
+  </body>
+</html>
