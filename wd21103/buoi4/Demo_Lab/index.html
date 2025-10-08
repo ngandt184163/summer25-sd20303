@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LAP 2</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div id="layout">
+      <header>
+        <!-- Phần đầu trang -->
+        <!-- <img src="./img/logo1.png" alt=""> -->
+        <canvas id="canvas"></canvas>
+        <script>
+          var canvas = document.getElementById("canvas");
+          var ctx = canvas.getContext("2d");
+          canvas.width = 980;
+          canvas.height = 120;
+          //   canvas.style.border = "1px solid #d3d3d3";
+
+          // ve hinh thang
+          ctx.beginPath(); // khoi tao
+          ctx.moveTo(0, 0); // diem bat dau goc tren ben trai
+          ctx.lineTo(205, 19); // diem ket thuc goc tren ben phai
+          ctx.lineTo(225, 50); // diem ket thuc goc giua ben phai
+          ctx.lineTo(205, 85); // diem ket thuc goc duoi ben phai
+          ctx.lineTo(0, 103); // diem ket thuc goc duoi ben trai
+          ctx.closePath(); // ket thuc
+          ctx.fillStyle = "#ff0000"; // mau nen
+          ctx.fill();
+
+          //   ve chu
+          //  them chu HTML5
+          ctx.font = "bold 50px Roboto";
+          ctx.fillStyle = "#fff"; // chu mau trang
+          ctx.fillText("HTML5", 20, 70); // ve chu va vi tri chu
+
+          //   them chu & CSS3
+          ctx.font = "bold 50px Roboto";
+          ctx.fillStyle = "#ff0000"; // chu mau trang
+          ctx.fillText("& CSS3", 230, 70); // ve chu va vi tri chu
+        </script>
+      </header>
+      <nav>
+        <!-- Menu -->
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="service.html">Service</a></li>
+          <li><a href="product.html">Product</a></li>
+        </ul>
+        <form action="" method="get">
+          <input
+            id="tim_kiem"
+            name="tim_kiem"
+            type="text"
+            placeholder="enter here"
+            required
+          />
+          <button id="search" type="submit">Search</button>
+        </form>
+      </nav>
+      <main>
+        <article>
+          <!-- Sản phẩm -->
+          <section class="imgBox">
+            <section class="name">
+              <span>Smart Tivi LG 4K 43 inch</span>
+            </section>
+            <img class="imgsp" src="./img/sp.png" alt="" />
+          </section>
+          <section class="detail">
+            <section class="price">
+              <del>11.900.000đ</del>
+              <section>9.190.000đ</section>
+            </section>
+            <section class="store">
+              <label
+                >Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
+                odit labore repudiandae iusto architecto accusantium sapiente
+                obcaecati, fugiat quis tenetur quam neque distinctio, facere,
+                molestias nam pariatur perferendis? Hic, magnam?</label
+              >
+            </section>
+            <a href="" class="cart">View</a>
+          </section>
+        </article>
+        <article>
+          <!-- Sản phẩm -->
+          <section class="imgBox">
+            <section class="name">
+              <span>Smart Tivi LG 4K 43 inch</span>
+            </section>
+            <img class="imgsp" src="./img/sp.png" alt="" />
+          </section>
+          <section class="detail">
+            <section class="price">
+              <del>11.900.000đ</del>
+              <section>9.190.000đ</section>
+            </section>
+            <section class="store">
+              <label
+                >Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
+                odit labore repudiandae iusto architecto accusantium sapiente
+                obcaecati, fugiat quis tenetur quam neque distinctio, facere,
+                molestias nam pariatur perferendis? Hic, magnam?</label
+              >
+            </section>
+            <a href="" class="cart">View</a>
+          </section>
+        </article>
+        <article>
+          <!-- Sản phẩm -->
+          <section class="imgBox">
+            <section class="name">
+              <span>Smart Tivi LG 4K 43 inch</span>
+            </section>
+            <img class="imgsp" src="./img/sp.png" alt="" />
+          </section>
+          <section class="detail">
+            <section class="price">
+              <del>11.900.000đ</del>
+              <section>9.190.000đ</section>
+            </section>
+            <section class="store">
+              <label
+                >Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
+                odit labore repudiandae iusto architecto accusantium sapiente
+                obcaecati, fugiat quis tenetur quam neque distinctio, facere,
+                molestias nam pariatur perferendis? Hic, magnam?</label
+              >
+            </section>
+            <a href="" class="cart">View</a>
+          </section>
+        </article>
+        <article>
+          <!-- Sản phẩm -->
+          <section class="imgBox">
+            <section class="name">
+              <span>Smart Tivi LG 4K 43 inch</span>
+            </section>
+            <img class="imgsp" src="./img/sp.png" alt="" />
+          </section>
+          <section class="detail">
+            <section class="price">
+              <del>11.900.000đ</del>
+              <section>9.190.000đ</section>
+            </section>
+            <section class="store">
+              <label
+                >Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
+                odit labore repudiandae iusto architecto accusantium sapiente
+                obcaecati, fugiat quis tenetur quam neque distinctio, facere,
+                molestias nam pariatur perferendis? Hic, magnam?</label
+              >
+            </section>
+            <a href="" class="cart">View</a>
+          </section>
+        </article>
+        <article>
+          <!-- Sản phẩm -->
+          <section class="imgBox">
+            <section class="name">
+              <span>Smart Tivi LG 4K 43 inch</span>
+            </section>
+            <img class="imgsp" src="./img/sp.png" alt="" />
+          </section>
+          <section class="detail">
+            <section class="price">
+              <del>11.900.000đ</del>
+              <section>9.190.000đ</section>
+            </section>
+            <section class="store">
+              <label
+                >Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
+                odit labore repudiandae iusto architecto accusantium sapiente
+                obcaecati, fugiat quis tenetur quam neque distinctio, facere,
+                molestias nam pariatur perferendis? Hic, magnam?</label
+              >
+            </section>
+            <a href="" class="cart">View</a>
+          </section>
+        </article>
+        <article>
+          <!-- Sản phẩm -->
+          <section class="imgBox">
+            <section class="name">
+              <span>Smart Tivi LG 4K 43 inch</span>
+            </section>
+            <img class="imgsp" src="./img/sp.png" alt="" />
+          </section>
+          <section class="detail">
+            <section class="price">
+              <del>11.900.000đ</del>
+              <section>9.190.000đ</section>
+            </section>
+            <section class="store">
+              <label
+                >Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
+                odit labore repudiandae iusto architecto accusantium sapiente
+                obcaecati, fugiat quis tenetur quam neque distinctio, facere,
+                molestias nam pariatur perferendis? Hic, magnam?</label
+              >
+            </section>
+            <a href="" class="cart">View</a>
+          </section>
+        </article>
+
+        <!-- <section class="product">
+          <h4>Smart Tivi LG 4K 43 inch</h4>
+          <img class="imgsp" src="./img/sp.png" alt="" />
+          <p class="giagoc">11.900.000đ</p>
+          <p class="sale">9.190.000đ</p>
+        </section>
+        <section class="product">
+          <h4>Smart Tivi LG 4K 43 inch</h4>
+          <img class="imgsp" src="./img/sp.png" alt="" />
+          <p class="giagoc">11.900.000đ</p>
+          <p class="sale">9.190.000đ</p>
+        </section>
+        <section class="product">
+          <h4>Smart Tivi LG 4K 43 inch</h4>
+          <img class="imgsp" src="./img/sp.png" alt="" />
+          <p class="giagoc">11.900.000đ</p>
+          <p class="sale">9.190.000đ</p>
+        </section>
+        <section class="product">
+          <h4>Smart Tivi LG 4K 43 inch</h4>
+          <img class="imgsp" src="./img/sp.png" alt="" />
+          <p class="giagoc">11.900.000đ</p>
+          <p class="sale">9.190.000đ</p>
+        </section>
+        <section class="product">
+          <h4>Smart Tivi LG 4K 43 inch</h4>
+          <img class="imgsp" src="./img/sp.png" alt="" />
+          <p class="giagoc">11.900.000đ</p>
+          <p class="sale">9.190.000đ</p>
+        </section> -->
+      </main>
+      <footer>
+        <!-- Tiêu đề cuối -->
+        Đinh Thị Ngân - Ngandt35
+      </footer>
+    </div>
+  </body>
+</html>
