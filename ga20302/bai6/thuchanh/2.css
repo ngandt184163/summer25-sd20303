@@ -1,0 +1,28 @@
+table td,
+th {
+  padding: 10px;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+tbody tr:nth-child(2n + 1) {
+  background-color: yellowgreen;
+}
+
+tbody tr:nth-child(2n) {
+  background-color: pink;
+}
+
+tbody tr:first-child {
+  background-color: lightblue;
+}
+
+tbody tr:last-child {
+  background-color: violet;
+}
+
+thead tr {
+  background-color: lightgray;
+}
