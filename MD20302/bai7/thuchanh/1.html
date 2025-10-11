@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 1. form trong html la mot thanh phan de 
+     thu thap du lieu tu nguoi dung va gui ve cho
+     may chu xu ly. Chuc nang chinh cua form la
+     tao ra cac o nhap lieu nhu van ban, nut chon,
+     hop kieu, danh sach, nut bam, ... giup
+     nguoi dung nhap thong tin (dang ki tai
+     khoan, dang nhap, doi mat khau, dat hang,
+     tim kiem) -->
+    <!-- su dung js de kiem tra tinh hop le cua du lieu (validate) -->
+    <style>
+      .err {
+        color: red;
+      }
+    </style>
+    <h2>dang ky tai khoan</h2>
+    <form id="myForm" action="" method="get" enctype="multipart/form-data">
+      hoten: <input type="text" name="hoten" /> <br />
+      <p class="err" id="err_hoten"></p>
+      email:<input type="email" name="email" /><br />
+      <p class="err" id="err_email"></p>
+      password: <input type="password" name="password" /><br />
+      <p class="err" id="err_password"></p>
+      avatar: <input type="file" name="avatar" /><br />
+      <p class="err" id="err_avatar"></p>
+      <input type="submit" value="dang ky" />
+      <!-- <button type="submit">dang ky</button> -->
+    </form>
+    <script src="1.js"></script>
+    <script src="4.js"></script>
+  </body>
+</html>
