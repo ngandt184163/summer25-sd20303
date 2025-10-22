@@ -1,0 +1,166 @@
+/* Reset & base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f6f6f6;
+  font-family: "Times New Roman", serif;
+  color: #111;
+}
+
+/* Header */
+header {
+  width: 100%;
+  height: 90px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+  padding: 0 100px;
+}
+
+/* Logo (Canvas) */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+/* Search box */
+.search-box {
+  position: relative;
+  margin-left: auto;
+  margin-right: 40px;
+}
+
+.search-box input {
+  width: 140px;
+  height: 30px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0 35px 0 10px;
+  outline: none;
+  transition: width 0.5s ease;
+}
+
+.search-box input:focus {
+  width: 200px;
+}
+
+.search-box img {
+  position: absolute;
+  top: 5px;
+  right: 7px;
+  width: 20px;
+}
+
+/* Menu */
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 35px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  font-size: 15px;
+  position: relative;
+  transition: 0.3s;
+}
+
+nav ul li a:hover::after,
+nav ul li a.active::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: #0a9105;
+  bottom: -5px;
+  left: 0;
+}
+
+nav ul li a:hover {
+  color: #000;
+}
+
+/* Blog Section */
+.blog-section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 60px auto;
+  text-align: center;
+}
+
+.blog-section h1 {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.blog-section p {
+  font-size: 17px;
+  line-height: 26px;
+  color: #333;
+  margin-bottom: 50px;
+}
+
+/* Blog container */
+.blog-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* Post card */
+.post {
+  width: 300px;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  transition: 0.3s;
+  overflow: hidden;
+}
+
+.post img {
+  width: 100%;
+  display: block;
+}
+
+.post h3 {
+  padding: 20px 25px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.post .desc {
+  padding: 0 25px 20px;
+  color: #555;
+  font-size: 15px;
+  line-height: 22px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease;
+}
+
+.post:hover .desc {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Footer */
+footer {
+  width: 100%;
+  background: #d6d2cd;
+  padding: 20px 0;
+  text-align: center;
+  color: #333;
+  font-size: 16px;
+  margin-top: 60px;
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snow Blog</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <canvas id="logoCanvas" width="150" height="50"></canvas>
+      </div>
+      <div class="search-box">
+        <input type="text" placeholder="Search..." />
+        <img src="images/search.png" alt="search" />
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#" class="active">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Lab</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="blog-section">
+      <h1>Latest Blog</h1>
+      <p>
+        Donec orci sem, pretium ac dolor et, faucibus faucibus mauris. Etiam,
+        pellentesque faucibus.<br />
+        Vestibulum gravida volutpat ipsum non ultrices.
+      </p>
+
+      <div class="blog-container">
+        <div class="post">
+          <img src="images/post-1-mid.jpg" alt="" />
+          <h3>Why you should Always First</h3>
+          <div class="desc">
+            This is a description about why you should always first...
+          </div>
+        </div>
+        <div class="post">
+          <img src="images/post-3-mid.jpg" alt="" />
+          <h3>Something I need to tell you</h3>
+          <div class="desc">
+            That female isn't midst divide kind upon seas lights greater green
+            creature lights brought.
+          </div>
+        </div>
+        <div class="post">
+          <img src="images/post-6-mid.jpg" alt="" />
+          <h3>The History of Nature waters</h3>
+          <div class="desc">
+            History about natural waters and its beauty around the world.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>2017 © Design by Poly</p>
+    </footer>
+
+    <script>
+      const canvas = document.getElementById("logoCanvas");
+      const ctx = canvas.getContext("2d");
+      ctx.font = "italic 50px 'Brush Script MT', cursive";
+      ctx.fillStyle = "black";
+      ctx.fillText("Snow", 10, 45);
+    </script>
+  </body>
+</html>
