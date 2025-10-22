@@ -40,138 +40,136 @@ nav ul li {
   font-weight: bold;
 }
 
-nav ul li a::before  {
-    content:"";
-    background-color: lime;
-    width: 0%;
-    height:5px;
-    position: absolute;
-    top: 100%
-    left: 0;
-    transition: 0.5s;
+nav ul li a:before {
+  content: "";
+  background-color: lime;
+  width: 0%;
+  height: 5px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  transition: 0.5s;
 }
 nav ul li a:hover {
-    color: red;
+  color: red;
 }
 
 nav ul li a:hover::before {
-    width: 50%;
-    transform: translate(100%);
+  width: 50%;
+  transform: translate(100%);
 }
 
 .search {
-    position:relative;
-    margin:auto;
-    margin-top: 15px;
-    margin-left: 15px;
+  position: relative;
+  margin: auto;
+  margin-top: 15px;
+  margin-left: 15px;
 }
 
 input[type="search"] {
-    width: 250px;
-    height: 25px;
-    border: none;
-    border-radius: 5px;
-    box-shadow: 0 0 3px black;
-    transition: 0.5s;
+  width: 250px;
+  height: 25px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 3px black;
+  transition: 0.5s;
 }
 
 input[type="search"]:focus {
-    width: 360px;
-    height: 30px;
-
+  width: 360px;
+  height: 30px;
 }
 
 main {
-    max-width: 900px;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+  max-width: 900px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .title h1 {
-    margin-top: 50px;
-    text-align: center;
-    font-size: 64px;
-    font-weight: bold;
+  margin-top: 50px;
+  text-align: center;
+  font-size: 64px;
+  font-weight: bold;
 }
 
 .title p {
-    text-align: center;
-    margin: 30px 0;
-    font-size: 24px;
+  text-align: center;
+  margin: 30px 0;
+  font-size: 24px;
 }
-
 
 article {
-    width: 290px;
-    height: 280px;
-    border: none;
-    position: relative;
-    margin-top: 15px;
-    overflow: hidden;
-} 
-
-article .imgbox img {
-    width: 100%;
+  width: 290px;
+  height: 280px;
+  border: none;
+  position: relative;
+  margin-top: 15px;
+  overflow: hidden;
 }
 
-article .details{
-    position: absolute;
-    height: 300px;
-    bottom: -200px;
-    left: 0;
-    width: 100%;
-    padding: 25px 35px;
-    background-color: #fff;
-    transition: 0.5s;
+article .imgbox img {
+  width: 100%;
+}
+
+article .details {
+  position: absolute;
+  height: 300px;
+  bottom: -200px;
+  left: 0;
+  width: 100%;
+  padding: 25px 35px;
+  background-color: #fff;
+  transition: 0.5s;
 }
 
 article .details h2 a {
-    color: #111;
-    text-decoration: none;
-    font-size: 1.5rem;
+  color: #111;
+  text-decoration: none;
+  font-size: 1.5rem;
 }
 
 article .details h2 a:hover {
-    color: orange;
+  color: orange;
 }
 
 article .details:hover {
-    bottom:0;
-    top:0
+  bottom: 0;
+  top: 0;
 }
 
 .info {
-    margin: 20px 0;
-    color: gray;
+  margin: 20px 0;
+  color: gray;
 }
 
 .store {
-    margin-top: 10px;
-    word-spacing: 5px;
-    height: 75px;
+  margin-top: 10px;
+  word-spacing: 5px;
+  height: 75px;
 }
 
 .color label {
-    font-weight: bold;
-    text-transform: uppercase;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 .cart {
-    display: block;
-    padding: 10px;
-    text-align: center;
-    color: #fff;
-    font-weight: bold;
-    background: lime;
-    text-decoration: none;
-    font-size: 1rem;
+  display: block;
+  padding: 10px;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  background: lime;
+  text-decoration: none;
+  font-size: 1rem;
 }
 
 footer {
-    margin-top: 10px;
-    text-align: center;
-    background-color: #ccc;
-    line-height: 100px;
+  margin-top: 10px;
+  text-align: center;
+  background-color: #ccc;
+  line-height: 100px;
 }
