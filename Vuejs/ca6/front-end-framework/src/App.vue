@@ -39,6 +39,7 @@ const trang_thai = true;
       </div>
     </div>
 
+    <!-- in thong tin ra trinh duyet -->
     <div class="info">
       <h1>Thong tin lop hoc</h1>
       <h2>ten mon: {{ ten_mon }}</h2>
