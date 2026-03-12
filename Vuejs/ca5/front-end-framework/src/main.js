@@ -1,7 +1,8 @@
 import "./assets/main.css";
 
 import { createApp } from "vue";
-import App from "./App.vue";
+// import App from "./App.vue";
+import App from "./baihoc/buoi2_App.vue";
 import router from "./router";
 
 // them bootstrap
