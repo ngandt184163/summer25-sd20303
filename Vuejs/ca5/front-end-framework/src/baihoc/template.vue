@@ -1,6 +1,20 @@
-<script setup></script>
+<script setup>
+import { ref } from "vue";
+const count = ref(0);
+const diem = ref();
+</script>
 
-<template></template>
+<template>
+  <h1>Bai 1</h1>
+  <p>so lan nhan: {{ count }}</p>
+  <button @click="count++">+</button>
+  <button @click="count--">-</button>
+  //ph44522 ph49192
+  <input v-model="diem" />
+  <p v-if="diem >= 8">gioi</p>
+  <p v-else-if="diem >= 5">kha</p>
+  <p v-else>truot</p>
+</template>
 
 <style scoped>
 header {
