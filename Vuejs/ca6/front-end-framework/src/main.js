@@ -3,7 +3,8 @@ import "./assets/main.css";
 import { createApp } from "vue";
 // import App from "./App.vue";
 // import App from "./baihoc/buoi2_App.vue";
-import App from "./baihoc/buoi3_App.vue";
+// import App from "./baihoc/buoi3_App.vue";
+import App from "./baihoc/template.vue";
 
 // import bootstrap
 import "bootstrap/dist/css/bootstrap.min.css";
