@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- viet truc tiep vao file html -->
+    <script>
+      console.log("Buoi 5");
+      /*
+      1. mang
+      - la danh sach du lieu co 
+      thu tu
+      - mang co index
+      - mang co the chua nhieu phan
+      tu voi kieu du lieu khac nhau
+      */
+      /*
+     -co 2 cach khai bao mang
+     + cach 1: sd cu phap []
+     + cach 2: sd new Array()
+     */
+      let arr1 = []; // mang rong
+      let arr2 = new Array(); // mang rong
+      let arr3 = [1, "hello", true, undefined, null];
+      console.log(arr3);
+      // cu phap truy cap phan tu mang
+      console.log(arr3[1]);
+      console.log(arr3[4]);
+      console.log(arr3[100]); // undefined
+      // kiem tra xem mang co bn phan tu
+      // lenght: tra ve so luong phan tu mang
+      console.log("lenght: ", arr3.length);
+      arr3[10] = 10;
+      console.log(arr3);
+      console.log(arr3[9]);
+      // cap nhat gia tri phan tu mang
+      arr3[1] = "hello world";
+      console.log(arr3[1]);
+      /*
+      khi cap nhat gia tri phan tu mang
+      ma gia tri do da ton tai roi thi
+      ta goi la cap nhat, con neu chua 
+      co thi goi la them moi
+      */
+      arr3[11] = 11;
+      console.log(arr3);
+      // duyet mang bang for
+      let len = arr3.length; // 12 lan lap
+      for (let i = 0; i < len; i++) {
+        console.log(arr3[i]);
+      }
+      for (let item of arr3) {
+        console.log(item);
+      }
+
+      /*
+      Thao tac voi mang
+      1. them phan tu vao mang
+      - push: them vao cuoi
+      - unshift: them vao dau
+      2. xoa
+      pop: xoa cuoi
+      shift: xoa dau
+      */
+      let arr4 = ["Hieu", "Hoa", "Lan", "Duyen"];
+      console.log(arr4);
+      arr4.push("Duc");
+      console.log(arr4);
+      arr4.unshift("Linh");
+      console.log(arr4);
+      arr4.pop();
+      console.log(arr4);
+      arr4.shift();
+      console.log(arr4);
+      /* splice: them, xoa, cap nhat
+      splice(x,y,z,...)
+      x: vi tri bat dau thao tac
+      y: so luong phan tu can xoa
+      tu z tro di la cac phan tu can
+      them vao mang
+      */
+      // them
+      arr4.splice(1, 0, "Nam", "Binh");
+      console.log(arr4);
+      // xoa
+      arr4.splice(4, 1);
+      console.log(arr4);
+      // vua xoa vua them
+      arr4.splice(2, 1, "A", "B");
+      console.log(arr4);
+      /*
+      Ve nha tim hieu them ham noi mang,
+      cat mang, 
+      */
+    </script>
+  </body>
+</html>
