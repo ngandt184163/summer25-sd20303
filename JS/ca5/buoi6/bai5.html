@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function doubleArray(arr) {
+        return arr.map((num) => num * 2);
+      }
+      console.log(doubleArray([1, 2, 3]));
+
+      let mang = [1, 2, 3, 4];
+      let tong = 0;
+      function suLy(mang) {
+        let soLe = mang.filter((a) => a % 2 == 0);
+        console.log(soLe);
+        let binhp = soLe.map((a) => a * a);
+        console.log(binhp);
+        for (let i = 0; i < binhp.length; i++) {
+          tong += binhp[i];
+          console.log(tong);
+        }
+      }
+      suLy(mang);
+
+      const processArray = (arr) => {
+        let sum = 0;
+        for (const value of arr) {
+          if (value % 2 === 0) {
+            sum += value * value;
+          }
+        }
+        return sum;
+      };
+      console.log(processArray(mang));
+    </script>
+  </body>
+</html>

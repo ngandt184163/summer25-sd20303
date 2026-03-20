@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>buoi6</h1>
+    <script>
+      /*
+        1. cac ham tim kiem trong mang
+        -indexOf: tim kiem xem phan tu
+        co xuat hien trong mang hay khong
+        va tra ve vi tri cua phan tu, neu 
+        khong tim thay tra ve  -1
+        - lastIndexOf: ve nha tim hieu
+        - includes: tim kiem xem phan tu
+        co xuat hien trong mang khong, 
+        neu co tra ve true, khong tra ve
+        false
+        */
+      let arr1 = [1, 2, 3, 4, 5, 3, 6, 7, 3, 8, 9, 10];
+      console.log(arr1);
+      console.log(arr1.indexOf(100));
+      // viet ham
+      function timKiem(arr, x) {
+        let i = arr.indexOf(x);
+        if (i == -1) {
+          console.log("khong tim thay");
+          return;
+        }
+        console.log("tim thay tai vi tri: ", i);
+      }
+      timKiem(arr1, 3);
+      timKiem(arr1, 100);
+      function timKiem2(arr, x) {
+        let i = arr.includes(x);
+        if (i == false) {
+          console.log("khong tim thay");
+          return;
+        }
+        console.log("da tim thay ", x);
+      }
+      timKiem2(arr1, 3);
+      timKiem2(arr1, 100);
+      let arr2 = [1, 2, 3];
+      /*tao mang moi tu arr2 sau khi binh
+      phuong cac phan tu cua arr2
+      */
+      let arr3 = arr2.map((x) => x * x);
+      console.log(arr3);
+      // tao mang moi theo dieu kien
+      let arr4 = arr2.filter((x) => x > 1);
+      console.log(arr4);
+      // tim phan tu dau tien thoa man dk
+      let j = arr2.find((x) => x > 1);
+      console.log(j);
+      // gom mang thanh gia tri duy nhat
+      let z = arr2.reduce((a, b) => a + b);
+      console.log(z);
+      /*
+      ham sap xep mang
+      - sort: sap xep mang tang dan, neu
+      khong co tham so thi se sap xep theo
+     ki tu unicode ( giong chuoi)
+      - reverse: dao nguoc mang
+      - neu de bai yc  sap xep mang giam dan
+      ta lam 2 buoc:
+      + b1: sort de mang tang dan
+      + b2: reverse de dao nguoc mang
+      */
+      let arr5 = [-9, 5, 8, 25, 0, 2, 34, 90, -23];
+      // sap xep tang
+      console.log(arr5.sort((a, b) => a - b));
+      arr5 = arr5.sort((a, b) => a - b);
+      console.log(arr5);
+      // sap xep giam dan
+      console.log(arr5.reverse());
+      // bai 1
+      function addElement(arr, value) {
+        arr.push(value);
+        console.log(arr);
+      }
+      addElement([1, 2], 3);
+
+      //bai3 PH67587
+      function fineIndex(arr, value) {
+        return arr.indexOf(value);
+        console.log(arr);
+      }
+      console.log(fineIndex([10, 20, 30], 20));
+    </script>
+  </body>
+</html>
