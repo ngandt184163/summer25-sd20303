@@ -25,7 +25,8 @@ function submitForm() {
     so thich: <br />
     <input type="checkbox" value="chay bo" v-model="multi_checkbox" /> chay bo
     <br />
-    <input type="checkbox" value="boi loi" v-model="multi_checkbox" /> boi loi
+    <input type="checkbox" value="boi loi" v-model="multi_checkbox" />
+    boi loi
     <br />
     <input type="checkbox" value="danh dan" v-model="multi_checkbox" /> danh dan
     <br />
