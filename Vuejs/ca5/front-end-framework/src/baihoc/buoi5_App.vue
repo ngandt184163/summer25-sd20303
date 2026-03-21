@@ -53,6 +53,8 @@ function reset() {
 function submit() {
   console.log(email.value);
 }
+
+const test = ref("");
 </script>
 <template>
   <h1>Buoi 5</h1>
@@ -72,5 +74,7 @@ function submit() {
 
   <p>{{ email }}</p>
   <input v-model="email" @keyup.esc="reset()" @keyup.enter="submit()" />
+  <input v-model.lazy="test" /><br />
+  <p>{{ test }} - {{ test.length }} {{ typeof test }}</p>
 </template>
 <style scoped></style>
