@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .product {
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>buoi7</h1>
+
+    <script>
+      /*
+        1. lap trinh huong doi tuong:
+        - la viec mo hinh hoa cac doi
+        tuong, thuc the ngoai cuoc song
+        thuc va dua vao the gioi lap 
+        trinh.
+        - vd: nguoi, may tinh, cai ban,
+        con cho, .....
+        - 1 doi tuong co 2 thanh phan:
+        + thuoc tinh: dung do mo ta 
+        dac tinh, dac trung cua doi tuong
+        (ten, tuoi, dia chi, ...)
+        + phuong thuc: la nhung hanh dong
+        cua doi tuong, chung ta se sd ham
+        de bieu dien cac phuong thuc
+        */
+
+      // khai bao 1 doi tuong hoc sinh
+      let student = {
+        id: 1,
+        name: "Nguyen Van An",
+        age: 20,
+        khoa_hoc: "K21",
+        chuyen_nganh: "CNTT",
+        dang_ky_hoc: function (mon_hoc) {
+          console.log(this.name + " dang ky hoc mon " + mon_hoc);
+        },
+        bao_luu: function () {
+          console.log(this.name + " dang ky bao luu ket qua hoc tap");
+        },
+      };
+      console.log(student);
+      // truy cap thuoc tinh
+      console.log(student["name"]);
+      console.log(student.name);
+      // truy cap phuong thuc
+      student.dang_ky_hoc("Lap trinh co so voi JavaScript");
+      // cap nhat tuoi
+      student.age = 22;
+      console.log(student.age);
+      // duyet obj
+      for (let key in student) {
+        console.log(key, student[key]);
+      }
+      // lay ra tat ca key cua doi tuong
+      console.log(Object.keys(student));
+      // lay ra tat ca value cua doi tuong
+      console.log(Object.values(student));
+      /*
+      2. JSON: la du lieu dang chuoi,
+      dung de luu tru gia tri,
+      trong truon hop can luu tru doi 
+      tuong, ta can dung JSON bien no
+      thanh chuoi, bao gio can dung
+      thi bien doi lai duoi dang doi
+      tuong
+      vd: student = {name: "ngandt35", class: "CNTT"}
+      JSON: "{name: 'ngandt35', class: CNTT'}"
+      */
+      // bien student thanh chuoi
+      let studentJson = JSON.stringify(student);
+      console.log(studentJson);
+      let message = "hello world";
+      console.log(message);
+      // bien student tro lai thanh doi tuong
+      let studentObject = JSON.parse(studentJson);
+      console.log(studentObject);
+      /*
+      3. mang cac doi tuong, la mang va moi phan 
+      tu cua mang se la 1 doi tuong
+      - vd bai assignment: yc lam 1 website thuong
+      mai dien tu, vd website nay ban giay, thi giay 
+      se la 1 doi tuong, chung ta co nhieu san pham
+      giay khac nhau, de luu tru va sd toi uu thi
+      se sd mang cac doi tuong de luu tru
+      */
+      let products = [
+        {
+          id: 1,
+          name: "Nike Air Max 90",
+          price: 1500000,
+          size: 42,
+          discription: "Giay the thao nam",
+        },
+        {
+          id: 2,
+          name: "Bitis Hunter",
+          price: 34000000,
+          size: 38,
+          discription: "Giay thoi trang nu",
+        },
+        {
+          id: 3,
+          name: "Giay Tre Em",
+          price: 980000,
+          size: 20,
+          discription: "Giay tre em tu 7-10 tuoi",
+        },
+      ];
+
+      for (let item of products) {
+        document.write(`<div class="product">
+        <i>${item.id}</i>
+        <h2>${item.name}</h2>
+        <b>${item.price}</b><br>
+        <mark>${item.size}</mark>
+        <p>${item.discription}</p>
+    </div>`);
+      }
+    </script>
+  </body>
+</html>
