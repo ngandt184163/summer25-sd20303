@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>buoi8</h1>
+    <script>
+      /*
+        1. class la gi: la khuon mau
+        de tao ra cac doi tuong co
+        chung cac thuoc tinh va
+        phuong thuc
+        - doi tuong duoc tao tu class
+        se la mot the hien cu the
+        cua class do
+        - co 2 cach tao class
+        + sd function
+        + sd class
+        */
+      // tao class chung bang function
+      // cho doi tuong giay
+      function Giay(id, name, price, size, discription) {
+        this.id = id;
+        this.name = name;
+        this.price = price;
+        this.size = size;
+        this.discription = discription;
+      }
+      // tao doi tuong tu Giay
+      let giay1 = new Giay(
+        1,
+        "Nike Air Max 90",
+        1500000,
+        42,
+        "Giay the thao nam",
+      );
+      console.log(giay1.name, giay1.size);
+      giay1.chat_lieu = "vai cao cap";
+      console.log(giay1);
+      let products = [
+        giay1,
+        new Giay(2, "Giay the thao nu", 3000000, 38),
+        new Giay(3, "Giay tre em", 980000, 20),
+      ];
+      console.log(products);
+
+      // tao lop bang tu khoa "class"
+      class Student {
+        // thuoc tinh
+        #name;
+        #age;
+        address;
+
+        constructor(name, age, address) {
+          this.#name = name;
+          this.#age = age;
+          this.address = address;
+        }
+        // phuong thuc
+        getInfo() {
+          console.log(`Ten: ${this.name}, Tuoi: ${this.age}`);
+        }
+      }
+      // tao doi tuong tu class
+      let student1 = new Student("NganDT35", 30, "Ha Noi");
+      let student2 = new Student("ThanhHt49", 40, "Hai Phong");
+      console.log(student1, student2);
+      console.log(student1.name);
+      console.log(student2.address);
+      student1.getInfo();
+    </script>
+  </body>
+</html>

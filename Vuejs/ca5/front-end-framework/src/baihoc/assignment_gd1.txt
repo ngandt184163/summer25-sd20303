@@ -1,0 +1,154 @@
+Chủ đề: Todo App (Quản lý công việc)
+KIẾN THỨC ÁP DỤNG
+
+Sinh viên bắt buộc dùng:
+
+Reactive (ref)
+Data Binding (v-model, {{ }})
+    Event (@click, @input)
+    List (v-for)
+    Condition (v-if, v-show)
+    Component
+    Props
+    Emit
+
+CẤU TRÚC APP
+App.vue
+├── TodoForm.vue
+├── TodoList.vue
+│     └── TodoItem.vue
+
+PHẦN 1 — HIỂN THỊ DANH SÁCH
+Yêu cầu
+Tạo danh sách todo:
+    id
+    name
+    done (true/false)
+Dữ liệu mẫu
+    const todos = ref([
+    { id: 1, name: "Học Vue", done: false },
+    { id: 2, name: "Làm bài tập", done: true }
+    ])
+Hiển thị
+    <li v-for="todo in todos" :key="todo.id">
+    {{ todo.name }}
+    </li>
+
+áp dụng: ref, v-for
+
+PHẦN 2 — THÊM TODO (FORM + EVENT)
+Yêu cầu
+    Input nhập tên công việc
+    Button “Thêm”
+Bắt buộc
+    Dùng v-model
+    Dùng @click, @submit
+Gợi ý
+    <input v-model="newTodo">
+    <button @click="addTodo">Thêm</button>
+    function addTodo(){
+    todos.value.push({
+        id: Date.now(),
+        name: newTodo.value,
+        done: false
+    })
+    }
+
+áp dụng: binding + event
+
+PHẦN 3 — HOÀN THÀNH / XÓA (EVENT)
+Yêu cầu
+
+Mỗi todo có:
+
+    Nút “Hoàn thành”
+    Nút “Xóa”
+Gợi ý
+    <button @click="toggle(todo)">✔</button>
+    <button @click="remove(todo.id)">X</button>
+    function toggle(todo){
+    todo.done = !todo.done
+    }
+
+    function remove(id){
+    todos.value = todos.value.filter(t => t.id !== id)
+    }
+
+áp dụng: event + xử lý data
+
+PHẦN 4 — HIỂN THỊ CÓ ĐIỀU KIỆN
+Yêu cầu
+    Nếu chưa có todo → hiển thị:
+    "Chưa có công việc"
+Gợi ý
+    <p v-if="todos.length === 0">Chưa có công việc</p>
+Bonus
+    Todo hoàn thành → gạch ngang
+    <span :style="{ textDecoration: todo.done ? 'line-through' : 'none' }">
+    {{ todo.name }}
+    </span>
+
+áp dụng: v-if, binding style
+
+PHẦN 5 — COMPONENT
+Tách component
+    TodoItem.vue
+    <template>
+    <li>
+        {{ todo.name }}
+    </li>
+    </template>
+
+    <script setup>
+    defineProps({
+    todo: Object
+    })
+    </script>
+
+    TodoList.vue
+    <template>
+    <ul>
+        <TodoItem 
+        v-for="todo in todos"
+        :key="todo.id"
+        :todo="todo"
+        />
+    </ul>
+    </template>
+
+    <script setup>
+    import TodoItem from "./TodoItem.vue"
+
+    defineProps({
+    todos: Array
+    })
+    </script>
+
+áp dụng: component + props
+
+PHẦN 6 — EMIT 
+Yêu cầu
+    Khi click “Xóa” hoặc “Hoàn thành”
+    TodoItem phải gửi event lên cha
+    TodoItem.vue
+    const emit = defineEmits(["delete", "toggle"])
+    <button @click="emit('toggle', todo)">✔</button>
+    <button @click="emit('delete', todo.id)">X</button>
+
+    TodoList.vue
+    <TodoItem
+    v-for="todo in todos"
+    :key="todo.id"
+    :todo="todo"
+    @delete="$emit('delete', $event)"
+    @toggle="$emit('toggle', $event)"
+    />
+
+    App.vue
+    <TodoList 
+    :todos="todos"
+    @delete="remove"
+    @toggle="toggle"
+    />
+
+áp dụng: emit chuẩn Vue

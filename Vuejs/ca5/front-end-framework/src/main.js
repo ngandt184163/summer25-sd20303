@@ -11,7 +11,8 @@ import { createApp } from "vue";
 // import App from "./baihoc/buoi6_App.vue";
 // import App from "./baihoc/baitapbuoi6_App.vue";
 // import App from "./baihoc/buoi7_App.vue";
-import App from "./baihoc/baitapbuoi7_App.vue";
+// import App from "./baihoc/baitapbuoi7_App.vue";
+import App from "./baihoc/buoi8_App.vue";
 
 import router from "./router";
 
