@@ -12,6 +12,9 @@ import { ref, provide } from "vue";
  * du lieu tu con len cha.
  * 4. Dynamic Slot: la Named slot
  * thay doi theo bien
+ * 5. Provide / Inject: dung de
+ * truyen du lieu nhieu cap tu
+ * cha xuong con
  */
 
 const slotName = ref("sp3");
