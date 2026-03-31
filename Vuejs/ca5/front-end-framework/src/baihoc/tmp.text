@@ -1,0 +1,62 @@
+1. CÀI ĐẶT ROUTER
+
+Chạy lệnh:
+
+npm install vue-router
+2. TẠO FILE ROUTER
+
+Tạo file:
+
+src/router/index.js
+Code mẫu
+import { createRouter, createWebHistory } from "vue-router"
+
+// import component
+import Home from "../views/Home.vue"
+import About from "../views/About.vue"
+
+const routes = [
+  { path: "/", component: Home },
+  { path: "/about", component: About }
+]
+
+const router = createRouter({
+  history: createWebHistory(),
+  routes
+})
+
+export default router
+3. TẠO THƯ MỤC VIEW
+
+Tạo:
+
+src/views/Home.vue
+src/views/About.vue
+Ví dụ Home.vue
+<template>
+  <h1>Home Page</h1>
+</template>
+4. IMPORT ROUTER VÀO APP
+
+main.js
+
+import { createApp } from "vue"
+import App from "./App.vue"
+import router from "./router"
+
+createApp(App)
+  .use(router)
+  .mount("#app")
+5. SỬ DỤNG ROUTER
+App.vue
+<template>
+  <nav>
+    <router-link to="/">Home</router-link>
+    <router-link to="/about">About</router-link>
+  </nav>
+
+  <router-view />
+</template>
+KẾT QUẢ
+/ → Home
+/about → About
