@@ -1,0 +1,121 @@
+Đề: Xây Dựng Ứng Dụng Quản Lý Sinh Viên (Student Management)
+YÊU CẦU
+
+Xây dựng một ứng dụng quản lý sinh viên sử dụng:
+
+Vue 3 (Composition API)
+Vue Router
+Axios (call API JSON Server)
+KIẾN THỨC ÁP DỤNG
+
+Sinh viên bắt buộc dùng:
+
+Component
+Props / Emit
+v-model, v-for, v-if
+Vue Router
+Axios (CRUD API)
+
+CẤU TRÚC DỮ LIỆU
+
+Mỗi sinh viên có:
+
+{
+  "id": "random",
+  "name": "Nguyễn Văn A",
+  "age": 20,
+  "email": "a@gmail.com",
+  "avatar": "https://..."
+}
+API
+GET     /students
+GET     /students/:id
+POST    /students
+PATCH   /students/:id
+DELETE  /students/:id
+CHỨC NĂNG
+Danh sách sinh viên (2 điểm)
+Yêu cầu
+Hiển thị danh sách từ API
+Hiển thị:
+id, name, age, email, avatar
+Xem chi tiết (1 điểm)
+Yêu cầu
+Nút "Chi tiết"
+Router sang:
+/students/:id
+Hiển thị đầy đủ thông tin
+Thêm sinh viên (2 điểm)
+Yêu cầu
+Form nhập:
+name
+age
+email
+avatar
+
+Gửi POST
+Cập nhật sinh viên (2 điểm)
+Yêu cầu
+Nút "Sửa"
+Load dữ liệu lên form
+
+Gửi PATCH
+Xóa sinh viên (1 điểm)
+Yêu cầu
+Nút "Xóa"
+Gọi API DELETE
+Validation (1 điểm)
+
+Điều kiện
+name: không rỗng
+age: > 0
+email: đúng format
+avatar: URL
+
+Giao diện (1 điểm)
+Yêu cầu
+Dùng Bootstrap
+Có:
+bảng danh sách
+form rõ ràng
+
+GỢI Ý CẤU TRÚC COMPONENT
+App.vue
+├── StudentList.vue
+├── StudentItem.vue
+├── StudentForm.vue
+├── StudentDetail.vue
+
+ROUTER
+[
+  { path: "/", component: StudentList },
+  { path: "/add", component: StudentForm },
+  { path: "/edit/:id", component: StudentForm },
+  { path: "/students/:id", component: StudentDetail }
+]
+
+LUỒNG DỮ LIỆU
+
+Cha giữ data
+Con nhận qua props
+Con emit event lên cha
+
+TIÊU CHÍ CHẤM
+Hiển thị list	
+Chi tiết	
+Thêm	
+Sửa	
+Xóa	
+Validation	
+UI	
+
+LƯU Ý
+
+ Không reload trang
+ Không hardcode data
+ Không sửa props trực tiếp
+
+BONUS (Làm thêm nếu có khả năng, sẽ được thêm điểm)
+Tìm kiếm theo tên
+Lọc theo tuổi
+Confirm khi xóa
