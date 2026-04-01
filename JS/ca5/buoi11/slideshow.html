@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="block()">Chan quang cao</button>
+    <script>
+      //   setTimeout(function () {
+      //     alert("Hay mua san pham cua chung toi");
+      //   }, 60000);
+
+      let intervalId = setInterval(function () {
+        alert("Hay mua san pham cua chung toi");
+      }, 30000);
+
+      //   setTimeout(function () {
+      //     // xoa setInterval
+      //     clearInterval(intervalId);
+      //   }, 100000);
+      function block() {
+        clearInterval(intervalId);
+      }
+    </script>
+  </body>
+</html>

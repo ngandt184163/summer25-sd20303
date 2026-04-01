@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>buoi11</h1>
+    <button onclick="dieuHuong()">Google</button>
+    <button onclick="reload()">Reload</button>
+    <button><a href="product.html">Trang san pham</a></button>
+    <script>
+      /**
+       * 1. BOM: la JS lam viec voi
+       * trinh duyet
+       *
+       */
+      console.log(window);
+      console.log(screen);
+      // 1 vai ham hop thoai
+      //   alert("xin chao cac ban");
+      //   let choice = confirm("ban co muon tiep tuc khong?");
+      //   console.log(choice);
+      //   let num = prompt("nhap so: ");
+      //   console.log(num);
+      // dieu huong trang
+      function dieuHuong() {
+        // location.href = "https://www.google.com";
+        // location.assign("https://www.google.com");
+        location.replace("https://www.google.com");
+      }
+      function reload() {
+        location.reload();
+      }
+
+      // history: quay lai trang
+
+      // navigator: lay thong tin
+      // trinh duyet
+      console.log(navigator.userAgent);
+      console.log(navigator.language);
+      console.log(navigator.onLine);
+      // screen
+      console.log(screen.width);
+      console.log(screen.height);
+      console.log(screen.availWidth);
+      console.log(screen.availHeight);
+    </script>
+  </body>
+</html>
