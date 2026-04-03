@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- mac dinh ban dau hien thi anh 1 -->
+    <img id="img" src="./img/anh1.jfif" />
+    <script>
+      // luu anh duoi dang mang
+      let arr = [
+        "./img/anh1.jfif",
+        "./img/anh2.jfif",
+        "./img/anh3.jfif",
+        "./img/anh4.jfif",
+        "./img/anh5.jfif",
+      ];
+      let len = arr.length;
+      let index = 0;
+      let img = document.getElementById("img");
+      // sd setInterval de thay doi anh sau moi 3s
+      setInterval(function () {
+        // kiem tra xem neu index ma con nho hon len - 1
+        // thi tang index len 1, neu da bang len -1 thi reset ve 0
+        if (index < len - 1) {
+          index++;
+        } else {
+          index = 0;
+        }
+        img.setAttribute("src", arr[index]);
+      }, 3000);
+    </script>
+  </body>
+</html>

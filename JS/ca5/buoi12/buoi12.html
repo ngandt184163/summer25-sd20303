@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 class="title abc">buoi12</h1>
+    <button id="btn1">Thay doi noi dung buoi hoc</button>
+    <h2>Thong tin</h2>
+    <div id="info" class="info">
+      <h2>NganDT35</h2>
+      <i>Phu Tho</i>
+    </div>
+    <button id="btn2">Them thong tin</button>
+    <h3 class="title">tieu de 3</h3>
+    <script>
+      /**
+       * 1. DOM?
+       * - la HTML duoi dang cay.
+       * 2. node trong Dom
+       * - element node: la the HTML
+       * - text node: la noi dung cua
+       * the HTML
+       * - attribute node: la thuoc tinh
+       * cua the HTML
+       * - comment node: la noi dung cua
+       * comment
+       * 3. Lay node trong DOM
+       * - cu the la lay element node
+       * - khi muon thao tac voi text
+       * node va attribute node thi phai
+       *  lay element node truoc
+       * *** cach cach lay node trong DOM ***
+       * - lay theo className: thi se tra ve
+       *  1 danh sach cac the HTML co cung class
+       * name, cb co the sd cu phap cua mang de
+       * duyet va truy cap cac the HTML do. thuong
+       * sd khi muon lay 1 danh sach cac the HTML
+       * co cung class name (co the la nhung the
+       * html khac nhau nhung cung co 1 class name
+       *  giong nhau)
+       * - lay theo id: thi se tra ve duy nhat
+       * 1 the html co cung id, id la duy nhat
+       * cho moi the, khong dc dat trung nhau,
+       * neu dat trung nhau thi se chi lay dc
+       * the html dau tien co id do.
+       * - lay theo tagName: thi se tra ve
+       *  1 danh sach cac the HTML co cung tag name, cb co the sd cu phap cua mang de
+       * co the duyet va truy cap cac the HTML do
+       * giong cu phap cua mang. thuong
+       * sd khi muon lay 1 danh sach cac the HTML
+       * co cung tag name.
+       *
+       * ---- ve nha tim hieu ve querySelector ------
+       * */
+      // lay h1, button, h2
+      let h1 = document.getElementsByClassName("title");
+      console.log(h1);
+      console.log(h1[0]);
+      let btn1 = document.getElementById("btn1");
+      console.log(btn1);
+      let h2 = document.getElementsByTagName("h2");
+      console.log(h2);
+
+      // gan su kien click cho btn1
+      btn1.onclick = function () {
+        // thay doi nd cho tieu de buoi hoc
+        // h1[0].innerText = "Buoi 13";
+        h1[0].innerHTML = "<i style='color:red'>Buoi 13</i>";
+      };
+
+      // thao tac lay attribute node
+      console.log(btn1.getAttribute("id"));
+      console.log(h1[0].getAttribute("class"));
+      h1[0].setAttribute("id", "testId");
+      btn1.setAttribute(
+        "style",
+        "text-shadow: 2px 2px 5px red; font-size: 20px",
+      );
+      // tao va them 1 the html vao DOM,
+      let info = document.getElementById("info");
+      let btn2 = document.getElementById("btn2");
+      console.log(info, btn2);
+      btn2.onclick = function () {
+        // them thong tin vao the info bang
+        // cach tao cac the can thiet
+        let p = document.createElement("p");
+        p.innerText = "Tuoi: 30";
+        let a = document.createElement("a");
+        a.innerText = "Lien he: Email";
+        a.setAttribute("href", "mailto:ngandt35@fe.edu.vn");
+        // them vao cuoi the info
+        info.appendChild(p);
+        info.appendChild(a);
+        // them vao dau the info
+        // info.prepend(p);
+        // info.prepend(a);
+
+        // neu sd innerHTML thi se xoa het noi dung cu cua info va thay bang noi dung moi
+        // info.innerHTML =
+        //   "<p>Tuoi: 30</p><a href='mailto:ngandt35@fe.edu.vn'>Lien he: Email</a>";
+        // Xoa 1 the html khoi DOM
+        setTimeout(function () {
+          a.remove();
+        }, 3000);
+      };
+    </script>
+  </body>
+</html>
