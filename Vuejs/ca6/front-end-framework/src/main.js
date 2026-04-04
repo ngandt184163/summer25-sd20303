@@ -13,7 +13,8 @@ import { createApp } from "vue";
 // import App from "./baihoc/buoi7_App.vue";
 // import App from "./baihoc/buoi8_App.vue";
 // import App from "./baihoc/buoi10_App.vue";
-import App from "./baihoc/buoi11_App.vue";
+// import App from "./baihoc/buoi11_App.vue";
+import App from "./baihoc/buoi12_App.vue";
 
 // import bootstrap
 import "bootstrap/dist/css/bootstrap.min.css";
