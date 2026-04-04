@@ -1,4 +1,5 @@
 <script setup>
+import { useRouter } from "vue-router";
 /**
  * 1. Lifecycle: la vong doi cua
  * component, la tat cac cac qua trinh 
@@ -38,6 +39,13 @@
   3.5 onBeforeUpdate()
     Chạy trước khi Update
  */
+
+const router = useRouter();
+const id = 1;
+
+function goToContact() {
+  router.push(`/contact/${id}`);
+}
 </script>
 
 <template>
@@ -45,6 +53,8 @@
     <router-link to="/">Home</router-link>
     <router-link to="/about">About</router-link>
   </nav>
+
+  <button @click="goToContact">Contact</button>
 
   <router-view />
 </template>
