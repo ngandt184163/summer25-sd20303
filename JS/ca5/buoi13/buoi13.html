@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .red-text,
+      .err {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="title">Buoi 13</h1>
+    <button id="btn1">Doi mau do</button>
+    <button id="btn2">Xoa mau</button>
+    <button id="btn3">Toggle mau</button>
+
+    <h2>Form Dang nhap</h2>
+    <form id="form">
+      email: <input name="email" type="email" /><br />
+      <p id="e-err" class="err"></p>
+      password: <input name="password" type="password" /><br />
+      <p id="p-err" class="err"></p>
+      remember me: <input name="remember" type="checkbox" /><br />
+      <input type="submit" value="Dang nhap" />
+    </form>
+    <!-- tat ca cac the input trong form deu nen co thuoc tinh name
+     de giup truy cap gia tri cua input do theo form nhanh chong -->
+
+    <script>
+      /**
+       *1. su kiện: là hành động của
+       người dùng như: click, nhập dữ
+       liệu trên form, di chuột, submit
+       form,....
+       - người dùng hành động -> JS phản
+       ứng lại
+       2. Các loại sự kiện: chuột, bàn
+       phím, form, input, window,....
+
+       3. cách cách gắn sự kiện
+       - cách 1: gán trực tiếp vào html
+       - cách 2: lấy DOM và gán bằng
+       .on_ten_su_kien
+       - cách 3: lấy DOM và sd
+         addEventListener
+       */
+
+      let h1 = document.getElementById("title");
+      let btn1 = document.getElementById("btn1");
+      let btn2 = document.getElementById("btn2");
+      let btn3 = document.getElementById("btn3");
+      console.log(h1, btn1, btn2, btn3);
+
+      // gan su kien cho 3 nut
+      btn1.onclick = function () {
+        // thay doi mau cua h1 thanh do
+        // h1.setAttribute("style", "color: red");
+        h1.classList.add("red-text");
+      };
+      btn2.addEventListener("click", function () {
+        // h1.setAttribute("style", "color: black");
+        h1.classList.remove("red-text");
+      });
+      btn3.addEventListener("click", function () {
+        // sd ClassList
+        h1.classList.toggle("red-text");
+      });
+
+      // xu li form dang nhap
+      let form = document.getElementById("form");
+      console.log(form);
+      form.addEventListener("submit", function (event) {
+        // ngan chan hanh vi gui form mac dinh, phai nho cach viet cua ham nay
+        event.preventDefault();
+        // 1. validate du lieu toan form(kiem tra tinh hop le cua du lieu)
+        /*
+        yeu cau tat cac cac truong du lieu khong duoc trong, email phai
+        dung dinh dang, password phai co do dai tu 6 ky tu tro len,....
+        */
+        //    lay du lieu tu form
+        let email = form.email.value;
+        let password = form.password.value;
+
+        let isValidate = true;
+        if (email.trim() == "") {
+          //   alert("Email khong duoc de trong");
+          document.getElementById("e-err").innerText =
+            "email ko khong dc de trong";
+          isValidate = false;
+        } else {
+          document.getElementById("e-err").innerText = "";
+        }
+        if (password.trim().length === 0) {
+          //   alert("Password khong duoc de trong");
+          document.getElementById("p-err").innerText = "mk ko dc de trong";
+          isValidate = false;
+        } else if (password.trim().length < 6) {
+          //   alert("Password phai co it nhat 6 ky tu");
+          document.getElementById("p-err").innerText = "mk phai tren 6 ky tu";
+          isValidate = false;
+        } else {
+          alert(
+            `Dang nhap thanh cong: \nEmail: ${email} \nPassword: ${password}`,
+          );
+        }
+        return isValidate;
+      });
+
+      /* VE NHA TIM HIEU CAC SU KIEN SAU
+      Sự kiên trong FORM
+        ✓ onsubmit – Gửi form
+        ✓ onchange – Thay đổi giá trị
+        ✓ oninput – Nhập dữ liệu
+        ✓ onfocus – Focus vào ô nhập
+        ✓ onblur – Rời khỏi ô nhập
+        ✓ onreset – Reset form
+      */
+    </script>
+  </body>
+</html>
