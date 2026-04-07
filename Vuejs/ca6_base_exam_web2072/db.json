@@ -1,0 +1,18 @@
+{
+  "students": [
+    {
+      "id": 1,
+      "name": "Nguyễn Văn A",
+      "age": 20,
+      "email": "a@gmail.com",
+      "avatar": "https://mautranhve.vn/wp-content/uploads/2025/10/anh-avatar-fb-vo-tri.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Trần Thị B",
+      "age": 21,
+      "email": "b@gmail.com",
+      "avatar": "https://mautranhve.vn/wp-content/uploads/2025/10/avatar-fb-vo-tri-5.jpg"
+    }
+  ]
+}
