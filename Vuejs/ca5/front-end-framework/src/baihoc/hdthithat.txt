@@ -1,0 +1,17 @@
+1. tai tai nguyen thi tai day va giai nen truoc o nha
+
+2. sau khi giai nen chay khoi dong va kiem tra
+- du an da co router chua
++ kiem tra xem da co thu muc src/router/index.js chua?
++ kiem tra trong main.js da co import router chua?
++ kiem tra package.js xem da co router chua? 
+- du an da co Axios chua
++ kiem tra package.json xem da co axios chua?
++ tim kiem trong code xem da co file nao import va sd chua?
++ kiem tra xem da co src/services/api.js hay chua?
+- dua an da co json server chua
++ co file db.json khong?
++ chay thu: json-server --watch db.json --port 3000 sau do
+chay thu tren trinh duyet xem duoc khong?
+
+3. sau khi du moi truong thi doc de va lam bai.

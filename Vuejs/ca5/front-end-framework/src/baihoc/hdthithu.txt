@@ -1,0 +1,216 @@
+1. CÀI ĐẶT JSON SERVER
+Buoc 1: cai Json server
+npm install -g json-server
+
+BƯỚC 2 — TẠO FILE DATABASE
+db.json  
+{
+  "students": [
+    {
+      "id": 1,
+      "name": "Nguyễn Văn A",
+      "age": 20,
+      "email": "a@gmail.com",
+      "avatar": "https://via.placeholder.com/100"
+    },
+    {
+      "id": 2,
+      "name": "Trần Thị B",
+      "age": 21,
+      "email": "b@gmail.com",
+      "avatar": "https://via.placeholder.com/100"
+    }
+  ]
+}
+
+
+BƯỚC 3 — CHẠY SERVER
+json-server --watch db.json --port 3000
+
+2. TẠO PROJECT VUE (neu da co thi bo qua)
+npm create vue@latest
+cd project
+npm install
+npm install axios vue-router
+npm run dev
+
+3. CẤU TRÚC PROJECT
+src/
+ ├── router/
+ │    └── index.js
+ ├── views/
+ │    ├── StudentList.vue
+ │    ├── StudentForm.vue
+ │    └── StudentDetail.vue
+ ├── services/
+ │    └── api.js
+ └── App.vue
+
+4. TẠO API SERVICE
+Tạo API Service = gom toàn bộ gọi API vào 1 chỗ
+Neu khong thi code se rai rac khap noi:
+axios.get("http://localhost:3000/students")
+axios.post("http://localhost:3000/students")
+axios.delete("http://localhost:3000/students/1")
+
+Khi project lớn:
+10 file gọi API
+đổi URL → sửa 10 chỗ 
+rất dễ lỗi
+
+src/services/api.js
+import axios from 'axios'
+
+const api = axios.create({
+  baseURL: 'http://localhost:3000',
+})
+
+export default api
+
+
+5. ROUTER
+src/router/index.js
+import { createRouter, createWebHistory } from "vue-router"
+
+import StudentList from "../views/StudentList.vue"
+import StudentForm from "../views/StudentForm.vue"
+import StudentDetail from "../views/StudentDetail.vue"
+
+const routes = [
+  { path: "/", component: StudentList },
+  { path: "/add", component: StudentForm },
+  { path: "/edit/:id", component: StudentForm },
+  { path: "/students/:id", component: StudentDetail }
+]
+
+export default createRouter({
+  history: createWebHistory(),
+  routes
+})
+
+======================================
+SINH VIEN HOAN THIEN CHUC NANG HIEN THI DANH SACH, THEM & SUA,
+XOA,...
+- THAM KHAO CAC DOAN CODE DUOI DAY
+6. CHỨC NĂNG 1 — HIỂN THỊ DANH SÁCH: StudentList.vue
+<script setup>
+import { ref, onMounted } from "vue"
+import api from "../services/api"
+import { useRouter } from "vue-router"
+
+const students = ref([])
+const router = useRouter()
+
+const fetchStudents = async () => {
+  const res = await api.get("/students")
+  students.value = res.data
+}
+
+const goDetail = (id) => {
+  router.push(`/students/${id}`)
+}
+
+const goEdit = (id) => {
+  router.push(`/edit/${id}`)
+}
+
+const removeStudent = async (id) => {
+  await api.delete(`/students/${id}`)
+  fetchStudents()
+}
+
+onMounted(fetchStudents)
+</script>
+
+<template>
+  <h1>Danh sách sinh viên</h1>
+
+  <button @click="router.push('/add')">Thêm</button>
+
+  <ul>
+    <li v-for="s in students" :key="s.id">
+      {{ s.name }} - {{ s.age }}
+
+      <button @click="goDetail(s.id)">Xem</button>
+      <button @click="goEdit(s.id)">Sửa</button>
+      <button @click="removeStudent(s.id)">Xóa</button>
+    </li>
+  </ul>
+</template>
+
+7. CHỨC NĂNG 2 — THÊM & SỬA: StudentForm.vue
+<script setup>
+import { ref, onMounted } from "vue"
+import api from "../services/api"
+import { useRoute, useRouter } from "vue-router"
+
+const route = useRoute()
+const router = useRouter()
+
+const student = ref({
+  name: "",
+  age: "",
+  email: "",
+  avatar: ""
+})
+
+const isEdit = route.params.id
+
+// load data nếu edit
+onMounted(async () => {
+  if (isEdit) {
+    const res = await api.get(`/students/${isEdit}`)
+    student.value = res.data
+  }
+})
+
+// submit
+const submit = async () => {
+  if (isEdit) {
+    await api.patch(`/students/${isEdit}`, student.value)
+  } else {
+    await api.post("/students", student.value)
+  }
+
+  router.push("/")
+}
+</script>
+
+<template>
+  <h1>{{ isEdit ? "Sửa" : "Thêm" }} sinh viên</h1>
+
+  <input v-model="student.name" placeholder="Tên" />
+  <input v-model="student.age" placeholder="Tuổi" />
+  <input v-model="student.email" placeholder="Email" />
+  <input v-model="student.avatar" placeholder="Avatar" />
+
+  <button @click="submit">Lưu</button>
+</template>
+
+8. CHỨC NĂNG 3 — CHI TIẾT: StudentDetail.vue
+<script setup>
+import { ref, onMounted } from "vue"
+import api from "../services/api"
+import { useRoute } from "vue-router"
+
+const route = useRoute()
+const student = ref(null)
+
+onMounted(async () => {
+  const res = await api.get(`/students/${route.params.id}`)
+  student.value = res.data
+})
+</script>
+
+<template>
+  <div v-if="student">
+    <h2>{{ student.name }}</h2>
+    <p>Age: {{ student.age }}</p>
+    <p>Email: {{ student.email }}</p>
+    <img :src="student.avatar" width="100" />
+  </div>
+</template>
+
+===========================
+CAC YEU CAU KHAC NHU: VALIDATE DU LIEU FORM, SD BOOTSTRAP
+CHO GIAO DIEN, CAC CHUC NANG NANG CAO YC CAC BAN TU LAM.
