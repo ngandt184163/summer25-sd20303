@@ -5,6 +5,7 @@
     <ul class="nav flex-column">
       <li class="nav-item mb-2">
         <router-link class="nav-link" :to="{ name: 'home' }">Quy chế thi</router-link>
+        <router-link class="nav-link" :to="{ name: 'list' }">Danh sách sinh viên</router-link>
       </li>
     </ul>
   </div>
