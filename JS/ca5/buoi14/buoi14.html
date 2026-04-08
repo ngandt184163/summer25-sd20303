@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Buổi 14</h1>
+    <div id="dn" class="hidden">
+      <p id="title1">Chao mung den voi trang web</p>
+      <b id="username"></b>
+      <button id="btn1">Dang Xuat</button>
+    </div>
+    <div id="dx" class="hidden">
+      <p id="title2">Ban chua dang nhap</p>
+      <button id="btn2">Dang nhap</button>
+    </div>
+
+    <audio src="audio.mp3" controls></audio>
+    <video id="video" src="video.mp4"></video>
+
+    <!-- ve canvas -->
+    <canvas id="canvas"></canvas>
+    <script>
+      // ve hinh vuong do mau do tren canvas
+      let canvas = document.getElementById("canvas");
+      let ctx = canvas.getContext("2d");
+      ctx.fillStyle = "red";
+      ctx.fillRect(50, 50, 100, 100);
+      // ve nha thuc hanh them bang cach sd cac thuoc tinh va phuong thuc
+      // duoc liet ke trong slide 8 (trang 17-24);
+
+      /**
+       * 1. API la gi: la cach de
+       * website lay du lieu, dung
+       * chuc nang co san, no la cau
+       * noi giua website va du lieu,
+       * giua website va thiet bi.
+       * -vd: lay vi tri, lay du lieu,
+       * phat nhac....
+       * 2. mot vai API co san trong
+       * trinh duyet: localStorage,
+       * geolocation,audio/video,
+       * ve canvas,.....
+       */
+
+      // localStorage: luu tru du lieu tren trinh duyet
+      // luu tru du lieu dang key-value, du lieu luu tren localStorage
+      localStorage.setItem("username", "ngandt35");
+      // khi nguoi dung vao trang web kiem tra xem da co username chua,
+      // neu co thi thong bao da dang nhap va hien thi username, neu chua
+      // co thi thong bao chua dang nhap
+      let dn = document.getElementById("dn");
+      let title1 = document.getElementById("title1");
+      let username = document.getElementById("username");
+      let btn1 = document.getElementById("btn1");
+      let dx = document.getElementById("dx");
+      let title2 = document.getElementById("title2");
+      let btn2 = document.getElementById("btn2");
+      console.log(dn, title1, username, btn1, dx, title2, btn2);
+      // lay ten nguoi dung tu localStorage
+
+      // kiem tra va hien thi
+      function checkLogin() {
+        let user = localStorage.getItem("username");
+        if (user) {
+          dn.classList.remove("hidden");
+          username.innerText = user;
+          dx.classList.add("hidden");
+        } else {
+          dx.classList.remove("hidden");
+          dn.classList.add("hidden");
+        }
+      }
+      checkLogin();
+      // xu li dang nhap dang xuat
+      btn1.onclick = function () {
+        // xoa username trong localStorage
+        localStorage.removeItem("username");
+        checkLogin();
+      };
+      btn2.onclick = function () {
+        // them username trong localStorage
+        localStorage.setItem("username", "ngandt35");
+        checkLogin();
+      };
+      /** sessionStorage: cung giong nhu localStorage nhung chi luu tren 1 tab
+       * va se mat khi tat tab, con localStorage thi luu tren trinh duyet va
+       *  khong mat khi tat tab.
+       */
+
+      // lay vi tri bang geolocation
+      navigator.geolocation.getCurrentPosition(function (position) {
+        console.log(
+          "Vi do: ",
+          position.coords.latitude,
+          "Kinh do:",
+          position.coords.longitude,
+        );
+      });
+
+      let video = document.getElementById("video");
+      video.onclick = function () {
+        if (video.paused) {
+          video.play();
+        } else {
+          video.pause();
+        }
+      };
+      // ve nha tim hieu them ve cac nut khac cua audio, video,...
+    </script>
+  </body>
+</html>
