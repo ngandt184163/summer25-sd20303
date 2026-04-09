@@ -21,6 +21,7 @@ const router = createRouter({
   ],
 })
 
+// kiem tra dang nhap truoc khi vao cac trang khac
 router.beforeEach((to, from, next) => {
   const user = localStorage.getItem('user')
   if (!user && to.name !== 'login' && to.name !== 'home') {

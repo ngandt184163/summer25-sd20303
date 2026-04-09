@@ -2,7 +2,7 @@
   "students": [
     {
       "id": 1,
-      "name": "Nguyễn Văn A",
+      "name": "Nguyễn Văn C",
       "age": 20,
       "email": "a@gmail.com",
       "avatar": "https://mautranhve.vn/wp-content/uploads/2025/10/anh-avatar-fb-vo-tri.jpg"
@@ -13,6 +13,20 @@
       "age": 21,
       "email": "b@gmail.com",
       "avatar": "https://mautranhve.vn/wp-content/uploads/2025/10/avatar-fb-vo-tri-5.jpg"
+    },
+    {
+      "name": "ngandt35",
+      "email": "ngandt35@fe.edu.vn",
+      "age": "30",
+      "avatar": "https://cayxanhhuongloc.com.vn/wp-content/uploads/2018/05/261eaae5f08edff790d7e6980dc7d35a-min-360x320.jpg",
+      "id": 3
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password": "admin123"
     }
   ]
 }

@@ -42,9 +42,17 @@ const goEdit = (id) => {
 
 // goi ham fetchStudents khi component duoc gan vao DOM
 onMounted(fetchStudents)
+
+const logout = () => {
+  // xoa thong tin nguoi dung trong localStorage
+  localStorage.removeItem('user')
+  // chuyen huong ve trang login
+  router.push({ name: 'login' })
+}
 </script>
 
 <template>
+  <button @click="logout">Dang xuat</button>
   <h1>Danh sách sinh viên</h1>
   <button @click="router.push('/add')">Them</button>
   <ul>
