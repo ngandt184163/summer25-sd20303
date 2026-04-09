@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "Nguyễn Văn A",
-      "age": 20,
+      "age": "30",
       "email": "a@gmail.com",
       "avatar": "https://mautranhve.vn/wp-content/uploads/2025/10/anh-avatar-fb-vo-tri.jpg"
     },
@@ -13,6 +13,20 @@
       "age": 21,
       "email": "b@gmail.com",
       "avatar": "https://mautranhve.vn/wp-content/uploads/2025/10/avatar-fb-vo-tri-5.jpg"
+    },
+    {
+      "name": "ngandt35",
+      "age": "30",
+      "email": "ngandt35@fe.edu.vn",
+      "avatar": "https://cdn.dangcapphaidep.vn/wp-content/uploads/2017/11/nhung-cong-dung-lam-dep-cua-sen-5.jpg",
+      "id": 3
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password": "admin123"
     }
   ]
 }

@@ -19,6 +19,10 @@ const fetchStudents = async () => {
 const goDetail = (id) => {
   router.push(`/students/${id}`)
 }
+
+const goEdit = (id) => {
+  router.push(`/edit/${id}`)
+}
 // ham xoa sv
 const removeStudent = async (id) => {
   await api.delete(`students/${id}`)
@@ -27,9 +31,18 @@ const removeStudent = async (id) => {
 }
 
 onMounted(fetchStudents)
+
+//
+const logout = () => {
+  // xoa thong tin nguoi dung trong localStorage
+  localStorage.removeItem('user')
+  // chuyen den trang login
+  router.push({ name: 'login' })
+}
 </script>
 
 <template>
+  <button @click="logout">Dang Xuat</button>
   <h1>Danh sách sinh viên</h1>
   <button @click="router.push('/add')">Them moi</button>
   <ul>
