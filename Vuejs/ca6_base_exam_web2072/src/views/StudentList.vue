@@ -58,9 +58,9 @@ const logout = () => {
   <ul>
     <li v-for="student in students" :key="student.id">
       {{ student.name }}
-      <button @click="goDetail(student.id)">Xem</button>
-      <button @click="goEdit(student.id)">Sua</button>
-      <button @click="removeStudent(student.id)">Xoa</button>
+      <button class="btn btn-success" @click="goDetail(student.id)">Xem</button>
+      <button class="btn btn-primary" @click="goEdit(student.id)">Sua</button>
+      <button class="btn btn-danger" @click="removeStudent(student.id)">Xoa</button>
     </li>
   </ul>
 </template>

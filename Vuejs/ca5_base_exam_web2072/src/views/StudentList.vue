@@ -45,12 +45,23 @@ const logout = () => {
   <button @click="logout">Dang Xuat</button>
   <h1>Danh sách sinh viên</h1>
   <button @click="router.push('/add')">Them moi</button>
-  <ul>
-    <li v-for="student in students" :key="student.id">
-      {{ student.name }}
-      <button class="btn btn-warning" @click="goDetail(student.id)">Xem</button>
-      <button class="btn btn-info" @click="goEdit(student.id)">Sua</button>
-      <button class="btn btn-danger" @click="removeStudent(student.id)">Xoa</button>
-    </li>
-  </ul>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Xem</th>
+        <th scope="col">Sua</th>
+        <th scope="col">Xoa</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr v-for="student in students" :key="student.id">
+        <th scope="row">{{ student.name }}</th>
+        <td><button class="btn btn-warning" @click="goDetail(student.id)">Xem</button></td>
+        <td><button class="btn btn-info" @click="goEdit(student.id)">Sua</button></td>
+        <td><button class="btn btn-danger" @click="removeStudent(student.id)">Xoa</button></td>
+      </tr>
+    </tbody>
+  </table>
 </template>
